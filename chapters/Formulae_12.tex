@@ -1,0 +1,330 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+
+\begin{document}
+	\begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi]
+		
+		\item Multiplicative Property of Determinants.
+		For any two square matrices $\vec{A}, \vec{B} \in \mathbb{R}^{n \times n}$:
+		\begin{align}
+			\mydet{\vec{A}\vec{B}} = \mydet{\vec{A}}\mydet{\vec{B}} \label{eq:CBSE12-2019-det_mult}
+		\end{align}
+		For an order-$2$ square matrix $\vec{A} = \myvec{a & b \\ c & d}$:
+		\begin{align}
+			\mydet{\vec{A}} = ad - bc \label{eq:CBSE12-2019-det_2x2}
+		\end{align}
+		
+		\item Derivative of an Exponential Function via Chain Rule:
+		\begin{align}
+			\frac{d}{dx}\sbrak{e^{u\brak{x}}} = e^{u\brak{x}} \frac{du}{dx} \label{eq:CBSE12-2019-diff_exp_chain}
+		\end{align}
+		For $u(x) = kx$:
+		\begin{align}
+			\frac{d}{dx}\sbrak{e^{kx}} = k e^{kx} \label{eq:CBSE12-2019-diff_exp_linear}
+		\end{align}
+		
+		\item Order and Degree of an Ordinary Differential Equation.
+		For a differential equation relating $x, y$ and derivatives $y^{(k)} = \frac{d^k y}{dx^k}$:
+		\begin{itemize}
+			\item \textbf{Order:} The highest order $n$ of the derivative $\dfrac{d^n y}{dx^n}$ present in the equation.
+			\item \textbf{Degree:} The highest power/exponent of the highest-order derivative, defined \textit{only} if the equation can be expressed as a polynomial in all its derivatives. If any derivative occurs within transcendental functions (such as $\log$, $\sin$, $e^x$), the degree is \textbf{not defined}.
+		\end{itemize}
+		
+		\item Direction Cosines and Direction Ratios of a Line.
+		If a line makes angles $\alpha, \beta, \gamma$ with the positive $x, y, z$ axes:
+		\begin{align}
+			l = \cos\alpha, \quad m = \cos\beta, \quad n = \cos\gamma \label{eq:CBSE12-2019-dc_def}
+		\end{align}
+		The fundamental identity connecting direction cosines is:
+		\begin{align}
+			l^2 + m^2 + n^2 = 1 \label{eq:CBSE12-2019-dc_sum_sq}
+		\end{align}
+		If the line makes equal angles with all three coordinate axes ($\alpha = \beta = \gamma$):
+		\begin{align}
+			l = m = n = \pm \frac{1}{\sqrt{3}} \label{eq:CBSE12-2019-dc_equal}
+		\end{align}
+		
+		\item Vector and Cartesian Equations of a Straight Line in 3D.
+		A line passing through a point with position vector $\vec{a} = \myvec{x_1 \\ y_1 \\ z_1}$ parallel to direction vector $\vec{b} = \myvec{a \\ b \\ c}$ has:
+		\begin{align}
+			\text{Vector Form: } \vec{r} &= \vec{a} + \lambda \vec{b}, \quad \lambda \in \mathbb{R} \label{eq:CBSE12-2019-line_vec} \\
+			\text{Cartesian Form: } \frac{x - x_1}{a} &= \frac{y - y_1}{b} = \frac{z - z_1}{c} = \lambda \label{eq:CBSE12-2019-line_cart}
+		\end{align}
+		
+		\item Power Rule of Indefinite Integration:
+		\begin{align}
+			\int x^n \, dx = \frac{x^{n+1}}{n+1} + C, \quad n \neq -1 \label{eq:CBSE12-2019-int_power}
+		\end{align}
+		
+		\item Determinant of Powers of a Matrix:
+		\begin{align}
+			\mydet{\vec{A}^k} = \brak{\mydet{\vec{A}}}^k, \quad k \in \mathbb{Z}^+ \label{eq:CBSE12-2019-det_power}
+		\end{align}
+		
+		\item Binary Operations and Associativity.
+		An operation $*$ on a set $S$ is a binary operation if
+		\begin{align}
+			a * b \in S \quad \forall a, b \in S \quad (\text{Closure}) \label{eq:CBSE12-2019-binary_closure}
+		\end{align}
+		The operation is associative if
+		\begin{align}
+			\brak{a * b} * c = a * \brak{b * c} \quad \forall a, b, c \in S \label{eq:CBSE12-2019-associative}
+		\end{align}
+		
+		\item Vector Cross Product and Sine of Angle between Vectors.
+		For non-zero vectors $\vec{a}$ and $\vec{b}$ with angle $\theta \in [0, \pi]$:
+		\begin{align}
+			\norm{\vec{a} \times \vec{b}} = \norm{\vec{a}} \norm{\vec{b}} \sin\theta \label{eq:CBSE12-2019-cross_norm}
+		\end{align}
+		\begin{align}
+			\sin\theta = \frac{\norm{\vec{a} \times \vec{b}}}{\norm{\vec{a}} \norm{\vec{b}}} \label{eq:CBSE12-2019-sin_theta}
+		\end{align}
+		
+		\item Scalar Triple Product and Volume of Parallelepiped.
+		The volume of a parallelepiped with coterminous edge vectors $\vec{a}, \vec{b}, \vec{c}$ is
+		\begin{align}
+			V = \abs{\vec{a} \cdot \brak{\vec{b} \times \vec{c}}} = \abs{\mydet{\vec{a} & \vec{b} & \vec{c}}} \label{eq:CBSE12-2019-scalar_triple_vol}
+		\end{align}
+		
+		\item Binomial Distribution for Bernoulli Trials.
+		In $n$ independent trials with success probability $p$ and failure probability $q = 1 - p$:
+		\begin{align}
+			\pr{X = k} = \binom{n}{k} p^k q^{n-k}, \quad k \in \{0, 1, \dots, n\} \label{eq:CBSE12-2019-binomial_pmf}
+		\end{align}
+		The cumulative distribution satisfies:
+		\begin{align}
+			\pr{X \le k} = \sum_{r=0}^k \binom{n}{r} p^r q^{n-r} = 1 - \pr{X > k} \label{eq:CBSE12-2019-binomial_cdf}
+		\end{align}
+		
+		\item Discrete Probability Distribution Axioms.
+		For a discrete random variable $X$ taking values $\{x_1, x_2, \dots, x_k\}$:
+		\begin{align}
+			\pr{X = x_i} \ge 0 \quad \forall i, \qquad \sum_{i=1}^k \pr{X = x_i} = 1 \label{eq:CBSE12-2019-prob_dist_axioms}
+		\end{align}
+		
+		\item Standard Trigonometric Integrals:
+		\begin{align}
+			\int \sec x \tan x \, dx &= \sec x + C \label{eq:CBSE12-2019-int_sec_tan} \\
+			\int \csc x \cot x \, dx &= -\csc x + C \label{eq:CBSE12-2019-int_csc_cot}
+		\end{align}
+		
+		\item Special Integral Form $\displaystyle\int e^x \sbrak{f(x) + f'(x)} \, dx$:
+		\begin{align}
+			\int e^x \sbrak{f(x) + f'(x)} \, dx = e^x f(x) + C \label{eq:CBSE12-2019-exp_f_plus_fprime}
+		\end{align}
+		\solution
+		Applying integration by parts to the first term $\int e^x f(x) \, dx$:
+		\begin{align}
+			\int e^x f(x) \, dx &= f(x) \int e^x \, dx - \int \brak{f'(x) \int e^x \, dx} dx \\
+			&= f(x) e^x - \int f'(x) e^x \, dx
+		\end{align}
+		Adding $\int e^x f'(x) \, dx$ to both sides yields \eqref{eq:CBSE12-2019-exp_f_plus_fprime}.
+		
+		\item Conditional Probability and Bayes' Inversion:
+		\begin{align}
+			\pr{A \mid B} = \frac{\pr{AB}}{\pr{B}}, \quad \pr{B \mid A} = \frac{\pr{AB}}{\pr{A}} \label{eq:CBSE12-2019-cond_prob}
+		\end{align}
+		\begin{align}
+			\implies \pr{A \mid B} = \frac{\pr{B \mid A}\pr{A}}{\pr{B}} \label{eq:CBSE12-2019-bayes_two_events}
+		\end{align}
+		
+		\item Separation of Variables for First-Order ODEs:
+		\begin{align}
+			\frac{dy}{dx} = g(x)h(y) \implies \int \frac{1}{h(y)} \, dy = \int g(x) \, dx + C \label{eq:CBSE12-2019-sep_vars}
+		\end{align}
+		
+		\item Inverse Trigonometric Identities:
+		\begin{align}
+			\cos^{-1} x &= \tan^{-1}\brak{\frac{\sqrt{1 - x^2}}{x}}, \quad 0 < x \le 1 \label{eq:CBSE12-2019-arccos_to_arctan} \\
+			\tan^{-1} u + \tan^{-1} v &= \tan^{-1}\brak{\frac{u + v}{1 - uv}}, \quad uv < 1 \label{eq:CBSE12-2019-arctan_add} \\
+			\sin\brak{\tan^{-1} w} &= \frac{w}{\sqrt{1 + w^2}} \label{eq:CBSE12-2019-sin_arctan}
+		\end{align}
+		
+		\item Invariance of Determinants under Elementary Row/Column Operations:
+		\begin{align}
+			\mydet{\vec{A}} = \mydet{\vec{E}\vec{A}} \quad \text{for shear operations } R_i \to R_i + k R_j \text{ or } C_i \to C_i + k C_j \label{eq:CBSE12-2019-det_shear_invariance}
+		\end{align}
+		
+		\item Equivalence Relation Criteria.
+		A binary relation $R$ on a set $A$ is:
+		\begin{itemize}
+			\item \textbf{Reflexive:} If $(a, a) \in R$ for all $a \in A$.
+			\item \textbf{Symmetric:} If $(a, b) \in R \implies (b, a) \in R$.
+			\item \textbf{Transitive:} If $(a, b) \in R$ and $(b, c) \in R \implies (a, c) \in R$.
+		\end{itemize}
+		
+		\item Bijective Maps and Functional Invertibility.
+		A function $f: X \to Y$ is invertible if and only if it is a bijection:
+		\begin{align}
+			\text{Injective: } & f(x_1) = f(x_2) \implies x_1 = x_2 \quad \forall x_1, x_2 \in X \label{eq:CBSE12-2019-injective} \\
+			\text{Surjective: } & \forall y \in Y, \, \exists x \in X \text{ such that } f(x) = y \label{eq:CBSE12-2019-surjective}
+		\end{align}
+		The inverse function satisfies $f^{-1}(y) = x \iff f(x) = y$.
+		
+		\item Logarithmic Differentiation.
+		For variable bases and exponents $u(x)^{v(x)} = w(x)^{z(x)}$:
+		\begin{align}
+			v(x)\ln\brak{u(x)} = z(x)\ln\brak{w(x)} \label{eq:CBSE12-2019-log_diff}
+		\end{align}
+		Differentiating implicitly using the product rule and chain rule:
+		\begin{align}
+			\frac{d}{dx}\sbrak{v \ln u} = \frac{dv}{dx}\ln u + \frac{v}{u}\frac{du}{dx} \label{eq:CBSE12-2019-product_log_diff}
+		\end{align}
+		
+		\item King's Property of Definite Integrals:
+		\begin{align}
+			\int_{0}^{a} f(x) \, dx = \int_{0}^{a} f(a - x) \, dx \label{eq:CBSE12-2019-kings_property}
+		\end{align}
+		\solution
+		Substitute $t = a - x \implies dx = -dt$. When $x = 0$, $t = a$; when $x = a$, $t = 0$:
+		\begin{align}
+			\int_{0}^{a} f(x) \, dx = \int_{a}^{0} f(a - t) \brak{-dt} = \int_{0}^{a} f(a - t) \, dt = \int_{0}^{a} f(a - x) \, dx
+		\end{align}
+		yielding \eqref{eq:CBSE12-2019-kings_property}.
+		For symmetric intervals of even functions:
+		\begin{align}
+			\int_{-a}^{a} g(u) \, du = 2\int_{0}^{a} g(u) \, du \quad \text{if } g(-u) = g(u) \label{eq:CBSE12-2019-even_int}
+		\end{align}
+		
+		\item Partial Fraction Decomposition for Irreducible Quadratic Factors:
+		\begin{align}
+			\frac{P(x)}{(x - \alpha)(x^2 + \beta^2)} = \frac{A}{x - \alpha} + \frac{Bx + C}{x^2 + \beta^2} \label{eq:CBSE12-2019-partial_fractions}
+		\end{align}
+		Standard primitive integrals:
+		\begin{align}
+			\int \frac{1}{x - \alpha} \, dx &= \ln\abs{x - \alpha} + C \label{eq:CBSE12-2019-int_linear_denom} \\
+			\int \frac{2x}{x^2 + \beta^2} \, dx &= \ln\brak{x^2 + \beta^2} + C \label{eq:CBSE12-2019-int_quad_num} \\
+			\int \frac{1}{x^2 + \beta^2} \, dx &= \frac{1}{\beta}\tan^{-1}\brak{\frac{x}{\beta}} + C \label{eq:CBSE12-2019-int_arctan}
+		\end{align}
+		
+		\item Homogeneous First-Order Differential Equations:
+		\begin{align}
+			\frac{dy}{dx} = F\brak{\frac{y}{x}} \label{eq:CBSE12-2019-homogeneous_ode}
+		\end{align}
+		\solution
+		Substituting $y = vx \implies \frac{dy}{dx} = v + x\frac{dv}{dx}$:
+		\begin{align}
+			v + x\frac{dv}{dx} = F(v) \implies \frac{dv}{F(v) - v} = \frac{dx}{x} \label{eq:CBSE12-2019-homog_separable}
+		\end{align}
+		reducing the equation to separable variables.
+		
+		\item First-Order Linear Differential Equations:
+		\begin{align}
+			\frac{dy}{dx} + P(x)y = Q(x) \label{eq:CBSE12-2019-linear_ode}
+		\end{align}
+		\solution
+		Multiplying by the integrating factor $\mu(x) = e^{\int P(x) \, dx}$:
+		\begin{align}
+			\frac{d}{dx}\sbrak{y \cdot \mu(x)} &= Q(x)\mu(x) \\
+			\implies y \cdot e^{\int P(x) \, dx} &= \int Q(x) e^{\int P(x) \, dx} \, dx + C \label{eq:CBSE12-2019-linear_ode_sol}
+		\end{align}
+		
+		\item Unit Vector and Orthogonal Vector Projection:
+		\begin{align}
+			\hat{u} = \frac{\vec{v}}{\norm{\vec{v}}}, \quad \norm{\hat{u}} = 1 \label{eq:CBSE12-2019-unit_vector}
+		\end{align}
+		For vectors $\vec{a}$ and $\vec{b}$:
+		\begin{align}
+			\vec{a} \cdot \vec{b} = a_x b_x + a_y b_y + a_z b_z \label{eq:CBSE12-2019-dot_product}
+		\end{align}
+		
+		\item Related Rates of Change via Derivative Chains.
+		If $V(t) = f(x(t))$ and $S(t) = g(x(t))$:
+		\begin{align}
+			\frac{dV}{dt} = f'(x)\frac{dx}{dt}, \quad \frac{dS}{dt} = g'(x)\frac{dx}{dt} \implies \frac{dS}{dt} = \frac{g'(x)}{f'(x)}\frac{dV}{dt} \label{eq:CBSE12-2019-related_rates}
+		\end{align}
+		For a cube with side length $x$:
+		\begin{align}
+			V = x^3 \implies \frac{dV}{dt} = 3x^2 \frac{dx}{dt}, \quad S = 6x^2 \implies \frac{dS}{dt} = 12x \frac{dx}{dt} \label{eq:CBSE12-2019-cube_rates}
+		\end{align}
+		
+		\item Plane Passing Through Three Non-Collinear Points.
+		The Cartesian equation of a plane through $\vec{a} = \myvec{x_1 \\ y_1 \\ z_1}$, $\vec{b} = \myvec{x_2 \\ y_2 \\ z_2}$, and $\vec{c} = \myvec{x_3 \\ y_3 \\ z_3}$ is
+		\begin{align}
+			\mydet{
+				x - x_1 & y - y_1 & z - z_1 \\
+				x_2 - x_1 & y_2 - y_1 & z_2 - z_1 \\
+				x_3 - x_1 & y_3 - y_1 & z_3 - z_1
+			} = 0 \label{eq:CBSE12-2019-plane_three_points}
+		\end{align}
+		In vector form with normal $\vec{n} = (\vec{b} - \vec{a}) \times (\vec{c} - \vec{a})$:
+		\begin{align}
+			\vec{r} \cdot \vec{n} = \vec{a} \cdot \vec{n} \label{eq:CBSE12-2019-plane_vector_normal}
+		\end{align}
+		
+		\item Calculus-Based Extremum and Optimization.
+		For a twice-differentiable functional $Z(y)$:
+		\begin{align}
+			\text{Stationary Condition: } & \frac{dZ}{dy} = 0 \label{eq:CBSE12-2019-extrema_first} \\
+			\text{Local Minimum: } & \left.\frac{d^2Z}{dy^2}\right|_{y=y^*} > 0 \label{eq:CBSE12-2019-extrema_second}
+		\end{align}
+		
+		\item Definite Integral as the Limit of Riemann Sums:
+		\begin{align}
+			\int_{a}^{b} f(x) \, dx = \lim_{h \to 0} h \sum_{r=1}^{n} f(a + rh), \quad \text{where } nh = b - a \label{eq:CBSE12-2019-riemann_limit}
+		\end{align}
+		Fundamental summation formulas:
+		\begin{align}
+			\sum_{r=1}^{n} r &= \frac{n(n + 1)}{2} \label{eq:CBSE12-2019-sum_r} \\
+			\sum_{r=1}^{n} r^2 &= \frac{n(n + 1)(2n + 1)}{6} \label{eq:CBSE12-2019-sum_r2} \\
+			\sum_{r=1}^{n} q^r &= q \frac{q^n - 1}{q - 1}, \quad q \neq 1 \label{eq:CBSE12-2019-sum_geom}
+		\end{align}
+		Asymptotic exponential limit:
+		\begin{align}
+			\lim_{h \to 0} \frac{e^{kh} - 1}{h} = k \label{eq:CBSE12-2019-exp_limit}
+		\end{align}
+		
+		\item Area of Plane Region Bounded by Curves:
+		\begin{align}
+			A = \int_{a}^{b} \brak{y_{\text{upper}}(x) - y_{\text{lower}}(x)} \, dx \label{eq:CBSE12-2019-area_curves}
+		\end{align}
+		
+		\item Matrix Inverse via Adjugate Matrix:
+		\begin{align}
+			\vec{A}^{-1} = \frac{1}{\mydet{\vec{A}}} \operatorname{adj}(\vec{A}) = \frac{1}{\mydet{\vec{A}}} \vec{C}^\top \label{eq:CBSE12-2019-inv_adjugate}
+		\end{align}
+		where $C_{ij} = (-1)^{i+j} M_{ij}$ is the cofactor of entry $a_{ij}$.
+		The unique solution to linear system $\vec{A}\vec{x} = \vec{b}$ is:
+		\begin{align}
+			\vec{x} = \vec{A}^{-1}\vec{b} \label{eq:CBSE12-2019-matrix_linear_sol}
+		\end{align}
+		
+		\item Matrix Inversion by Gauss-Jordan Row Elimination:
+		\begin{align}
+			\sbrak{\vec{A} \mid \vec{I}} \xrightarrow{R_i \to c R_i, \, R_i \leftrightarrow R_j, \, R_i \to R_i + k R_j} \sbrak{\vec{I} \mid \vec{A}^{-1}} \label{eq:CBSE12-2019-gauss_jordan}
+		\end{align}
+		
+		\item Linear Programming Problem (LPP) and Fundamental Corner-Point Theorem.
+		For the canonical problem:
+		\begin{align}
+			\text{Maximize/Minimize: } & Z = \vec{c}^\top \vec{x} \label{eq:CBSE12-2019-lpp_obj} \\
+			\text{Subject to: } & \vec{A}\vec{x} \le \vec{b}, \quad \vec{x} \ge \vec{0} \label{eq:CBSE12-2019-lpp_constraints}
+		\end{align}
+		The optimal value of the objective function $Z$ over a bounded convex polygonal feasible region occurs at one of the extreme (corner) vertices of the region.
+		
+		\item Law of Total Probability and Bayes' Theorem.
+		If $\{E_1, E_2, \dots, E_n\}$ forms a partition of sample space $S$:
+		\begin{align}
+			\pr{A} = \sum_{j=1}^{n} \pr{E_j} \pr{A \mid E_j} \label{eq:CBSE12-2019-total_prob}
+		\end{align}
+		\begin{align}
+			\pr{E_k \mid A} = \frac{\pr{E_k} \pr{A \mid E_k}}{\sum_{j=1}^{n} \pr{E_j} \pr{A \mid E_j}} \label{eq:CBSE12-2019-bayes_theorem}
+		\end{align}
+		
+		\item Distance Between Parallel Planes.
+		For two parallel planes $\Pi_1: Ax + By + Cz + D_1 = 0$ and $\Pi_2: Ax + By + Cz + D_2 = 0$:
+		\begin{align}
+			D = \frac{\abs{D_1 - D_2}}{\sqrt{A^2 + B^2 + C^2}} = \frac{\abs{d_1 - d_2}}{\norm{\vec{n}}} \label{eq:CBSE12-2019-parallel_planes_dist}
+		\end{align}
+		
+		\item Intersection of a Line and a Plane in 3D.
+		For a line $\vec{r} = \vec{a} + \lambda \vec{b}$ and plane $\vec{r} \cdot \vec{n} = d$:
+		\begin{align}
+			\brak{\vec{a} + \lambda \vec{b}} \cdot \vec{n} = d \implies \lambda = \frac{d - \vec{a} \cdot \vec{n}}{\vec{b} \cdot \vec{n}}, \quad \vec{b} \cdot \vec{n} \neq 0 \label{eq:CBSE12-2019-line_plane_intersection}
+		\end{align}
+		Substituting $\lambda$ back into the line equation yields the coordinates of the unique point of intersection.
+		
+	\end{enumerate}
+\end{document}

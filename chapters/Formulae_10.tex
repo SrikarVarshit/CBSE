@@ -1,0 +1,277 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+
+
+\begin{document}
+
+\begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi]
+	
+	\item Distance Formula and Equidistant Locus.
+	The Euclidean distance between two points $\vec{x}_1 = \myvec{x_1 \\ y_1}$ and $\vec{x}_2 = \myvec{x_2 \\ y_2}$ in $\mathbb{R}^2$ is given by
+	\begin{align}
+		\norm{\vec{x}_1 - \vec{x}_2}^2 = \brak{x_1 - x_2}^2 + \brak{y_1 - y_2}^2 \label{eq:CBSE10-2019-dist_sq}
+	\end{align}
+	A point $\vec{x}$ is equidistant from two fixed points $\vec{a}$ and $\vec{b}$ if
+	\begin{align}
+		\norm{\vec{x} - \vec{a}}^2 = \norm{\vec{x} - \vec{b}}^2 \label{eq:CBSE10-2019-equidistant}
+	\end{align}
+	\solution
+	Expanding \eqref{eq:CBSE10-2019-equidistant}:
+	\begin{align}
+		\norm{\vec{x}}^2 - 2\vec{a}^\top \vec{x} + \norm{\vec{a}}^2 &= \norm{\vec{x}}^2 - 2\vec{b}^\top \vec{x} + \norm{\vec{b}}^2 \\
+		\implies 2\brak{\vec{b} - \vec{a}}^\top \vec{x} &= \norm{\vec{b}}^2 - \norm{\vec{a}}^2 \label{eq:CBSE10-2019-perp_bisector}
+	\end{align}
+	yielding the equation of the perpendicular bisector.
+	
+	\item Standard Trigonometric Values and Complementary Identity:
+	\begin{align}
+		\sin\brak{60^\circ} = \frac{\sqrt{3}}{2}, \quad \tan\brak{45^\circ} = 1, \quad \cos\brak{30^\circ} = \frac{\sqrt{3}}{2} \label{eq:CBSE10-2019-trig_values}
+	\end{align}
+	For complementary angles:
+	\begin{align}
+		\cos\brak{90^\circ - \theta} = \sin\theta \implies \cos\brak{30^\circ} = \sin\brak{60^\circ} \label{eq:CBSE10-2019-trig_comp}
+	\end{align}
+	
+	\item Fundamental Pythagorean Trigonometric Identities:
+	\begin{align}
+		\cos^2 A + \sin^2 A = 1 \label{eq:CBSE10-2019-pythag_trig}
+	\end{align}
+	\solution
+	From \eqref{eq:CBSE10-2019-pythag_trig}, solving for $\cos A$ and its reciprocal $\sec A$:
+	\begin{align}
+		\cos A &= \sqrt{1 - \sin^2 A} \label{eq:CBSE10-2019-cos_from_sin} \\
+		\sec A &= \frac{1}{\cos A} = \frac{1}{\sqrt{1 - \sin^2 A}} \label{eq:CBSE10-2019-sec_from_sin}
+	\end{align}
+	
+	\item Pythagoras Theorem. In a right-angled triangle with legs $a, b$ and hypotenuse $c$:
+	\begin{align}
+		c^2 = a^2 + b^2 \label{eq:CBSE10-2019-pythagoras}
+	\end{align}
+	For an isosceles right triangle where $a = b$:
+	\begin{align}
+		c = \sqrt{a^2 + a^2} = a\sqrt{2} \label{eq:CBSE10-2019-isosceles_right}
+	\end{align}
+	
+	\item Basic Proportionality Theorem (Thales' Theorem).
+	If a line is drawn parallel to one side of a triangle intersecting the other two sides, then it divides the two sides in the same ratio:
+	\begin{align}
+		\frac{AD}{BD} = \frac{AE}{CE} \label{eq:CBSE10-2019-thales}
+	\end{align}
+	\solution
+	Let $h_1$ be the altitude from $E$ to $AB$ and $h_2$ be the altitude from $D$ to $AC$.
+	\begin{align}
+		\frac{\text{ar}\brak{\triangle ADE}}{\text{ar}\brak{\triangle BDE}} &= \frac{\frac{1}{2}AD \cdot h_1}{\frac{1}{2}BD \cdot h_1} = \frac{AD}{BD} \\
+		\frac{\text{ar}\brak{\triangle ADE}}{\text{ar}\brak{\triangle CDE}} &= \frac{\frac{1}{2}AE \cdot h_2}{\frac{1}{2}CE \cdot h_2} = \frac{AE}{CE}
+	\end{align}
+	Since $\triangle BDE$ and $\triangle CDE$ share base $DE$ between parallel lines $DE \parallel BC$, $\text{ar}\brak{\triangle BDE} = \text{ar}\brak{\triangle CDE}$, yielding \eqref{eq:CBSE10-2019-thales}.
+	
+	\item Newton-Raphson Iterative Method for Root Finding.
+	For a differentiable scalar function $f(x)$, the successive approximations to a root satisfy
+	\begin{align}
+		x_{n+1} = x_n - \frac{f\brak{x_n}}{f'\brak{x_n}} \label{eq:CBSE10-2019-newton_raphson}
+	\end{align}
+	A real root corresponds to a fixed point $x_{n+1} = x_n = x^*$ in $\mathbb{R}$ such that $f(x^*) = 0$.
+	
+	\item Discriminant and Nature of Quadratic Roots.
+	For the general quadratic equation $ax^2 + bx + c = 0$ ($a \neq 0$), the discriminant $D$ is defined as
+	\begin{align}
+		D = b^2 - 4ac \label{eq:CBSE10-2019-discriminant}
+	\end{align}
+	\begin{itemize}
+		\item $D > 0$: Two distinct real roots.
+		\item $D = 0$: Two equal real roots.
+		\item $D < 0$: No real roots (complex conjugate pair).
+	\end{itemize}
+	
+	\item Product and GCD/LCM Duality for Two Positive Integers:
+	\begin{align}
+		\gcd\brak{a, b} \times \operatorname{lcm}\brak{a, b} = a \times b \label{eq:CBSE10-2019-hcf_lcm}
+	\end{align}
+	\solution
+	Let $a = \prod p_i^{\alpha_i}$ and $b = \prod p_i^{\beta_i}$. Then:
+	\begin{align}
+		\gcd\brak{a,b} = \prod p_i^{\min\brak{\alpha_i, \beta_i}}, \quad \operatorname{lcm}\brak{a,b} = \prod p_i^{\max\brak{\alpha_i, \beta_i}}
+	\end{align}
+	Since $\min\brak{\alpha_i, \beta_i} + \max\brak{\alpha_i, \beta_i} = \alpha_i + \beta_i$, multiplying yields \eqref{eq:CBSE10-2019-hcf_lcm}.
+	
+	\item Unilateral Z-Transform of Discrete Sequences.
+	The unilateral $\mathcal{Z}$-transform of a causal sequence $x[n]$ is defined as
+	\begin{align}
+		X(z) = \mathcal{Z}\cbrak{x[n]} = \sum_{n=0}^{\infty} x[n]z^{-n} \label{eq:CBSE10-2019-z_transform_def}
+	\end{align}
+	Common transform pairs and time-delay properties:
+	\begin{align}
+		\mathcal{Z}\cbrak{u[n]} &= \frac{1}{1 - z^{-1}}, \quad \abs{z} > 1 \label{eq:CBSE10-2019-z_step} \\
+		\mathcal{Z}\cbrak{n u[n]} &= \frac{z^{-1}}{\brak{1 - z^{-1}}^2}, \quad \abs{z} > 1 \label{eq:CBSE10-2019-z_ramp} \\
+		\mathcal{Z}\cbrak{x[n-1]u[n-1]} &= z^{-1}X(z) \label{eq:CBSE10-2019-z_shift}
+	\end{align}
+	
+	\item Arithmetic Progression via First-Order Difference Equation:
+	\begin{align}
+		x[n] - x[n-1] = d \cdot u[n-1], \quad x[0] = a \label{eq:CBSE10-2019-ap_diff_eqn}
+	\end{align}
+	\solution
+	Taking the unilateral $\mathcal{Z}$-transform of \eqref{eq:CBSE10-2019-ap_diff_eqn} using \eqref{eq:CBSE10-2019-z_step}--\eqref{eq:CBSE10-2019-z_shift}:
+	\begin{align}
+		X(z) - z^{-1}X(z) - x[0] &= d \frac{z^{-1}}{1 - z^{-1}} \\
+		\implies X(z) &= \frac{x[0]}{1 - z^{-1}} + d \frac{z^{-1}}{\brak{1 - z^{-1}}^2}
+	\end{align}
+	Taking the inverse $\mathcal{Z}$-transform yields
+	\begin{align}
+		x[n] = x[0] + n \cdot d \label{eq:CBSE10-2019-ap_nth_term}
+	\end{align}
+	
+	\item Sum of the First $n$ Terms of an Arithmetic Progression:
+	\begin{align}
+		S_n = \frac{n}{2}\sbrak{2a + \brak{n - 1}d} \label{eq:CBSE10-2019-ap_sum}
+	\end{align}
+	\solution
+	Writing $S_n$ forward and backward:
+	\begin{align}
+		S_n &= a + (a+d) + \dots + (a + (n-1)d) \\
+		S_n &= (a + (n-1)d) + \dots + (a+d) + a
+	\end{align}
+	Summing the two equations term-by-term:
+	\begin{align}
+		2S_n = n \sbrak{2a + \brak{n - 1}d}
+	\end{align}
+	yielding \eqref{eq:CBSE10-2019-ap_sum}.
+	
+	\item Consistency and Infinite Solutions of Linear Systems.
+	For the matrix system $\mathbf{A}\vec{x} = \vec{b}$, infinite solutions exist if and only if
+	\begin{align}
+		\rank\brak{\mathbf{A}} = \rank\brak{[\mathbf{A} \mid \vec{b}]} < n \label{eq:CBSE10-2019-rouche_capelli}
+	\end{align}
+	where $n$ is the number of unknown variables.
+	
+	\item Mode of Grouped Frequency Distribution:
+	\begin{align}
+		\text{Mode} = l + \brak{\frac{f_1 - f_0}{2f_1 - f_0 - f_2}} \times h \label{eq:CBSE10-2019-mode}
+	\end{align}
+	where:
+	\begin{itemize}
+		\item $l$ is the lower limit of the modal class
+		\item $h$ is the class interval width
+		\item $f_1$ is the frequency of the modal class
+		\item $f_0$ is the frequency of the preceding class
+		\item $f_2$ is the frequency of the succeeding class
+	\end{itemize}
+	
+	\item Classical Probability and Partition Axiom.
+	If a sample space $S$ is partitioned into pairwise disjoint events $E_1, E_2, \dots, E_k$:
+	\begin{align}
+		\sum_{i=1}^k \pr{E_i} = 1, \quad \text{where } \pr{E} = \frac{n(E)}{n(S)} \label{eq:CBSE10-2019-prob_partition}
+	\end{align}
+	
+	\item Collinearity of Three Points in $\mathbb{R}^2$.
+	Points $\vec{A}, \vec{B}, \vec{C}$ are collinear if and only if their displacement vectors are linearly dependent:
+	\begin{align}
+		\mydet{\vec{B} - \vec{A} & \vec{C} - \vec{A}} = 0 \label{eq:CBSE10-2019-collinear}
+	\end{align}
+	
+	\item Area of a Triangle using Vector Determinant:
+	\begin{align}
+		\text{Area}\brak{\triangle ABC} = \frac{1}{2} \abs{\mydet{\vec{B} - \vec{A} & \vec{C} - \vec{A}}} \label{eq:CBSE10-2019-triangle_area_det}
+	\end{align}
+	
+	\item Section Formula in Vector Notation.
+	The point $\vec{P}$ dividing the segment between $\vec{A}$ and $\vec{B}$ internally in ratio $m:n$ is given by
+	\begin{align}
+		\vec{P} = \frac{m\vec{B} + n\vec{A}}{m + n} \label{eq:CBSE10-2019-section_formula}
+	\end{align}
+	
+	\item Matrix Inverse and Cramer's Rule for $2 \times 2$ Systems.
+	If $\mathbf{M} = \myvec{a & b \\ c & d}$ with $\mydet{\mathbf{M}} = ad - bc \neq 0$:
+	\begin{align}
+		\mathbf{M}^{-1} = \frac{1}{\mydet{\mathbf{M}}} \myvec{d & -b \\ -c & a} \label{eq:CBSE10-2019-matrix_inverse}
+	\end{align}
+	The unique solution to $\mathbf{M}\vec{x} = \vec{b}$ is $\vec{x} = \mathbf{M}^{-1}\vec{b}$.
+	
+	\item Euclidean Algorithm via Elementary Shear Transformations.
+	The reduction of an integer vector $\vec{v}_0 = \myvec{a \\ b}$ using shear matrices $\mathbf{E}_k = \myvec{1 & -q_k \\ 0 & 1}$ or $\myvec{1 & 0 \\ -q_k & 1}$ satisfies
+	\begin{align}
+		\mydet{\mathbf{E}_k} = 1 \implies \gcd\brak{a, b} = \gcd\brak{\mathbf{E}_k \vec{v}_0} \label{eq:CBSE10-2019-euclid_shear}
+	\end{align}
+	terminating when one coordinate becomes zero, leaving the non-zero invariant as $\gcd(a, b)$.
+	
+	\item Intersecting Chords Theorem.
+	If two chords $AC$ and $BD$ of a circle intersect at an interior point $P$:
+	\begin{align}
+		AP \times PC = BP \times DP \label{eq:CBSE10-2019-intersecting_chords}
+	\end{align}
+	\solution
+	In $\triangle PAB$ and $\triangle PDC$, angles in the same circular segment are equal ($\angle PBA = \angle PCD$) and vertically opposite angles are equal ($\angle APB = \angle DPC$). By AA similarity:
+	\begin{align}
+		\triangle PAB \sim \triangle PDC \implies \frac{AP}{DP} = \frac{BP}{PC}
+	\end{align}
+	Cross-multiplying yields \eqref{eq:CBSE10-2019-intersecting_chords}.
+	
+	\item Ratio of Areas of Similar Triangles.
+	If $\triangle ABC \sim \triangle DEF$, then
+	\begin{align}
+		\frac{\text{ar}\brak{\triangle ABC}}{\text{ar}\brak{\triangle DEF}} = \brak{\frac{AB}{DE}}^2 = \brak{\frac{BC}{EF}}^2 = \brak{\frac{CA}{FD}}^2 \label{eq:CBSE10-2019-similar_triangle_area}
+	\end{align}
+	
+	\item Tangent Hyperplane to a Circle.
+	The tangent line to the circle $\norm{\vec{x}} = r$ at contact point $\vec{r}_C = \myvec{r\cos\theta \\ r\sin\theta}$ has normal vector $\hat{n} = \myvec{\cos\theta \\ \sin\theta}$ and equation
+	\begin{align}
+		\hat{n}^\top \vec{x} = r \iff x\cos\theta + y\sin\theta = r \label{eq:CBSE10-2019-circle_tangent}
+	\end{align}
+	Two vectors $\vec{u}$ and $\vec{v}$ are orthogonal if
+	\begin{align}
+		\vec{u}^\top \vec{v} = 0 \iff \vec{u} \perp \vec{v} \label{eq:CBSE10-2019-orthogonality}
+	\end{align}
+	
+	\item Mensuration of Standard Plane and Composite Figures:
+	\begin{align}
+		\text{Area of quadrant} &= \frac{1}{4}\pi r^2 \label{eq:CBSE10-2019-quadrant_area} \\
+		\text{Area of square} &= s^2, \quad \text{Diagonal } d = s\sqrt{2} \label{eq:CBSE10-2019-square_geometry} \\
+		\text{Area of circumscribed circle} &= \pi R^2 = \pi \brak{\frac{s\sqrt{2}}{2}}^2 = \frac{\pi s^2}{2} \label{eq:CBSE10-2019-circumscribed_circle}
+	\end{align}
+	
+	\item Mensuration of Cylindrical and Spherical Solids:
+	\begin{align}
+		V_{\text{cylinder}} &= \pi r^2 h \label{eq:CBSE10-2019-vol_cylinder} \\
+		V_{\text{hemisphere}} &= \frac{2}{3}\pi r^3 \implies V_{\text{sphere}} = \frac{4}{3}\pi r^3 \label{eq:CBSE10-2019-vol_sphere} \\
+		\text{Mass} &= \rho \times V \label{eq:CBSE10-2019-mass_density}
+	\end{align}
+	where $\rho$ is the mass density and $V$ is the total volume.
+	
+	\item Arithmetic Mean of Grouped Data (Direct Method):
+	\begin{align}
+		\bar{x} = \frac{\sum_{i=1}^k f_i x_i}{\sum_{i=1}^k f_i}, \quad \text{where } x_i = \frac{l_i + u_i}{2} \label{eq:CBSE10-2019-mean}
+	\end{align}
+	
+	\item Polynomial Division and Quotient Ring Reduction.
+	In the polynomial ring $\mathbb{R}[x]$ modulo ideal $\langle d(x) \rangle$:
+	\begin{align}
+		f(x) \equiv r(x) \pmod{d(x)}, \quad \deg\brak{r} < \deg\brak{d} \label{eq:CBSE10-2019-poly_mod}
+	\end{align}
+	If $d(x)$ divides $f(x)$, then $r(x) \equiv 0$.
+	
+	\item Vieta's Relations for a Quadratic Polynomial.
+	If $\alpha$ and $\beta$ are zeroes of $p(x) = ax^2 + bx + c$:
+	\begin{align}
+		\alpha + \beta &= -\frac{b}{a} \label{eq:CBSE10-2019-vieta_sum} \\
+		\alpha \beta &= \frac{c}{a} \label{eq:CBSE10-2019-vieta_prod}
+	\end{align}
+	
+	\item Algebraic Identities for Trigonometric Proofs:
+	\begin{align}
+		a^3 - b^3 &= \brak{a - b}\brak{a^2 + ab + b^2} \label{eq:CBSE10-2019-cubic_diff} \\
+		\csc^2\theta - \cot^2\theta &= 1 \label{eq:CBSE10-2019-csc_cot_id} \\
+		\sec^2\theta - \tan^2\theta &= 1 \label{eq:CBSE10-2019-sec_tan_id}
+	\end{align}
+	
+	\item Geometric Homothety (Dilation Operator).
+	An isotropic dilation of $\mathbb{R}^2$ with center at the origin and scale factor $s > 0$ is defined by the transformation matrix
+	\begin{align}
+		\mathbf{H}_s = s\mathbf{I}_2 = \myvec{s & 0 \\ 0 & s} \label{eq:CBSE10-2019-dilation}
+	\end{align}
+	mapping any position vector $\vec{v}$ to $\vec{v}' = \mathbf{H}_s \vec{v} = s\vec{v}$, with distance ratio $\frac{\norm{\vec{v}' - \vec{w}'}}{\norm{\vec{v} - \vec{w}}} = s$.
+	
+\end{enumerate}
+	
+\end{document}
