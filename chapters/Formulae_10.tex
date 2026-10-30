@@ -1,11 +1,3 @@
-\documentclass[12pt,a4paper]{article}
-
-\usepackage{gvv-book}
-\usepackage{gvv}
-
-
-\begin{document}
-
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi]
 	
 	\item Distance Formula and Equidistant Locus.
@@ -67,12 +59,6 @@
 	\end{align}
 	Since $\triangle BDE$ and $\triangle CDE$ share base $DE$ between parallel lines $DE \parallel BC$, $\text{ar}\brak{\triangle BDE} = \text{ar}\brak{\triangle CDE}$, yielding \eqref{eq:CBSE10-2019-thales}.
 	
-	\item Newton-Raphson Iterative Method for Root Finding.
-	For a differentiable scalar function $f(x)$, the successive approximations to a root satisfy
-	\begin{align}
-		x_{n+1} = x_n - \frac{f\brak{x_n}}{f'\brak{x_n}} \label{eq:CBSE10-2019-newton_raphson}
-	\end{align}
-	A real root corresponds to a fixed point $x_{n+1} = x_n = x^*$ in $\mathbb{R}$ such that $f(x^*) = 0$.
 	
 	\item Discriminant and Nature of Quadratic Roots.
 	For the general quadratic equation $ax^2 + bx + c = 0$ ($a \neq 0$), the discriminant $D$ is defined as
@@ -95,33 +81,6 @@
 		\gcd\brak{a,b} = \prod p_i^{\min\brak{\alpha_i, \beta_i}}, \quad \operatorname{lcm}\brak{a,b} = \prod p_i^{\max\brak{\alpha_i, \beta_i}}
 	\end{align}
 	Since $\min\brak{\alpha_i, \beta_i} + \max\brak{\alpha_i, \beta_i} = \alpha_i + \beta_i$, multiplying yields \eqref{eq:CBSE10-2019-hcf_lcm}.
-	
-	\item Unilateral Z-Transform of Discrete Sequences.
-	The unilateral $\mathcal{Z}$-transform of a causal sequence $x[n]$ is defined as
-	\begin{align}
-		X(z) = \mathcal{Z}\cbrak{x[n]} = \sum_{n=0}^{\infty} x[n]z^{-n} \label{eq:CBSE10-2019-z_transform_def}
-	\end{align}
-	Common transform pairs and time-delay properties:
-	\begin{align}
-		\mathcal{Z}\cbrak{u[n]} &= \frac{1}{1 - z^{-1}}, \quad \abs{z} > 1 \label{eq:CBSE10-2019-z_step} \\
-		\mathcal{Z}\cbrak{n u[n]} &= \frac{z^{-1}}{\brak{1 - z^{-1}}^2}, \quad \abs{z} > 1 \label{eq:CBSE10-2019-z_ramp} \\
-		\mathcal{Z}\cbrak{x[n-1]u[n-1]} &= z^{-1}X(z) \label{eq:CBSE10-2019-z_shift}
-	\end{align}
-	
-	\item Arithmetic Progression via First-Order Difference Equation:
-	\begin{align}
-		x[n] - x[n-1] = d \cdot u[n-1], \quad x[0] = a \label{eq:CBSE10-2019-ap_diff_eqn}
-	\end{align}
-	\solution
-	Taking the unilateral $\mathcal{Z}$-transform of \eqref{eq:CBSE10-2019-ap_diff_eqn} using \eqref{eq:CBSE10-2019-z_step}--\eqref{eq:CBSE10-2019-z_shift}:
-	\begin{align}
-		X(z) - z^{-1}X(z) - x[0] &= d \frac{z^{-1}}{1 - z^{-1}} \\
-		\implies X(z) &= \frac{x[0]}{1 - z^{-1}} + d \frac{z^{-1}}{\brak{1 - z^{-1}}^2}
-	\end{align}
-	Taking the inverse $\mathcal{Z}$-transform yields
-	\begin{align}
-		x[n] = x[0] + n \cdot d \label{eq:CBSE10-2019-ap_nth_term}
-	\end{align}
 	
 	\item Sum of the First $n$ Terms of an Arithmetic Progression:
 	\begin{align}
@@ -265,13 +224,5 @@
 		\sec^2\theta - \tan^2\theta &= 1 \label{eq:CBSE10-2019-sec_tan_id}
 	\end{align}
 	
-	\item Geometric Homothety (Dilation Operator).
-	An isotropic dilation of $\mathbb{R}^2$ with center at the origin and scale factor $s > 0$ is defined by the transformation matrix
-	\begin{align}
-		\mathbf{H}_s = s\mathbf{I}_2 = \myvec{s & 0 \\ 0 & s} \label{eq:CBSE10-2019-dilation}
-	\end{align}
-	mapping any position vector $\vec{v}$ to $\vec{v}' = \mathbf{H}_s \vec{v} = s\vec{v}$, with distance ratio $\frac{\norm{\vec{v}' - \vec{w}'}}{\norm{\vec{v} - \vec{w}}} = s$.
 	
 \end{enumerate}
-	
-\end{document}

@@ -1,2049 +1,898 @@
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi]
 	
-\item Find $|AB|$, if
-$
-A=\begin{bmatrix}0&-1\\0&2\end{bmatrix},
-\qquad
-B=\begin{bmatrix}3&5\\0&0\end{bmatrix}.
-$
+\item Find $\mydet{\vec{AB}}$, if
+\begin{align}
+	\vec{A} = \myvec{0 & -1 \\ 0 & 2}, \quad \vec{B} = \myvec{3 & 5 \\ 0 & 0}
+\end{align}
+\hfill (12~2019)
 
 \solution
-Using the multiplicative property of determinants for square matrices:
-\begin{align*}
-	|AB| = |A| \cdot |B|
-\end{align*}
-
-\begin{align*}
-	|A| &= \begin{vmatrix} 0 & -1 \\ 0 & 2 \end{vmatrix} = (0)(2) - (-1)(0) = 0 - 0 = 0
-\end{align*}
-
-\begin{align*}
-	|B| &= \begin{vmatrix} 3 & 5 \\ 0 & 0 \end{vmatrix} = (3)(0) - (5)(0) = 0 - 0 = 0
-\end{align*}
-
-\begin{align*}
-	|AB| &= |A| \cdot |B| = 0 \times 0 = 0
-\end{align*}
+From \eqref{eq:CBSE12-2019-det_mult}:
+\begin{align}
+	\mydet{\vec{AB}} = \mydet{\vec{A}} \mydet{\vec{B}}
+\end{align}
+From \eqref{eq:CBSE12-2019-det_2x2}, evaluating the individual determinants:
+\begin{align}
+	\mydet{\vec{A}} &= \mydet{\myvec{0 & -1 \\ 0 & 2}} = \brak{0}\brak{2} - \brak{-1}\brak{0} = 0 \\
+	\mydet{\vec{B}} &= \mydet{\myvec{3 & 5 \\ 0 & 0}} = \brak{3}\brak{0} - \brak{5}\brak{0} = 0
+\end{align}
+Therefore:
+\begin{align}
+	\mydet{\vec{AB}} = 0 \times 0 = 0
+\end{align}
 
 
 \item Differentiate $e^{3x}$ with respect to $x$.
+\hfill (12~2019)
 
 \solution
-Given function be:
-\begin{align*}
-	y = e^{3x}
-\end{align*}
+Let the function be $y = e^{3x}$.
+From \eqref{eq:CBSE12-2019-diff_exp_linear}, differentiating with respect to $x$ using the chain rule \eqref{eq:CBSE12-2019-diff_exp_chain}:
+\begin{align}
+	\frac{dy}{dx} = \frac{d}{dx}\sbrak{e^{3x}} = 3e^{3x}
+\end{align}
 
-\begin{align*}
-	\frac{d}{dx}[e^{u}] = e^u \frac{du}{dx}
-\end{align*}
-
-Let $u = 3x$:
-\begin{align*}
-	\frac{du}{dx} = \frac{d}{dx}(3x) = 3
-\end{align*}
-
-Differentiating $y$ with respect to $x$:
-\begin{align*}
-	\frac{dy}{dx} &= e^{3x} \frac{d}{dx}(3x) = e^{3x} \times 3 = 3e^{3x}
-\end{align*}
 
 \item Find the order and degree (if defined) of the differential equation
-\[
-\frac{d^2y}{dx^2}+x\left(\frac{dy}{dx}\right)^2
-=2x^2\log\left(\frac{d^2y}{dx^2}\right).
-\]
+\begin{align}
+	\frac{d^2y}{dx^2} + x\brak{\frac{dy}{dx}}^2 = 2x^2\ln\brak{\frac{d^2y}{dx^2}} \label{eq:EE26BTECH11223-12-q3-de}
+\end{align}
+\hfill (12~2019)
 
 \solution
-The given differential equation is:
-\begin{align*}
-	\frac{d^2y}{dx^2} + x\left(\frac{dy}{dx}\right)^2 = 2x^2\log\left(\frac{d^2y}{dx^2}\right)
-\end{align*}
-
-\text{Order}
-
-The order of a differential equation is the order of the highest derivative appearing in it. 
-
-The derivatives appearing in the given equation are:
-\begin{align*}
-	\frac{dy}{dx} \quad (\text{first derivative}) \quad \text{and} \quad \frac{d^2y}{dx^2} \quad (\text{second derivative})
-\end{align*}
-
-The highest-order derivative present is $\dfrac{d^2y}{dx^2}$.
-
-Therefore:
-\begin{align*}
-	\text{Order} = 2
-\end{align*}
-
-\text{Degree:}
-
-The degree of a differential equation is defined as the exponent (power) of the highest-order derivative, provided the differential equation can be expressed as a polynomial equation in terms of its derivatives.
-
-In the given equation, the term:
-\begin{align*}
-	\log\left(\frac{d^2y}{dx^2}\right)
-\end{align*}
-contains a derivative inside a logarithmic transcendental function. Hence, the equation cannot be expressed as a polynomial in the derivatives $\dfrac{dy}{dx}$ and $\dfrac{d^2y}{dx^2}$.
-
-Therefore:
-\begin{align*}
-	\text{Degree is \text{not defined}.}
-\end{align*}
-
+Following the criteria in \eqref{eq:CBSE12-2019-dc_def}:
+\begin{itemize}
+	\item The highest-order derivative appearing in \eqref{eq:EE26BTECH11223-12-q3-de} is $\dfrac{d^2y}{dx^2}$. Hence, $\text{Order} = 2$.
+	\item The highest-order derivative $\dfrac{d^2y}{dx^2}$ appears inside a transcendental logarithmic function $\ln\brak{\cdot}$, meaning the differential equation cannot be expressed as a polynomial in its derivatives. Therefore, the \textbf{Degree is not defined}.
+\end{itemize}
 
 \item Find the direction cosines of a line which makes equal angles with the coordinate axes.
+\hfill (12~2019)
 
 \solution
-Let the line make angles $\alpha$, $\beta$, and $\gamma$ with the positive directions of the $x$, $y$, and $z$-axes, respectively.
+Let the line make equal angles $\alpha$ with the coordinate axes. From \eqref{eq:CBSE12-2019-dc_def} and \eqref{eq:CBSE12-2019-dc_sum_sq}:
+\begin{align}
+	l^2 + m^2 + n^2 = 1 \implies 3l^2 = 1 \implies l = \pm\frac{1}{\sqrt{3}}
+\end{align}
+From \eqref{eq:CBSE12-2019-dc_equal}, since $l = m = n$, the direction cosines are:
+\begin{align}
+	\brak{\pm\frac{1}{\sqrt{3}}, \, \pm\frac{1}{\sqrt{3}}, \, \pm\frac{1}{\sqrt{3}}}
+\end{align}
 
-The direction cosines of the line are defined as:
-\begin{align*}
-	l = \cos\alpha, \quad m = \cos\beta, \quad n = \cos\gamma
-\end{align*}
-
-Since the line makes equal angles with the coordinate axes[cite: 1]:
-\begin{align*}
-	\alpha = \beta = \gamma \implies \cos\alpha = \cos\beta = \cos\gamma
-\end{align*}
-which gives:
-\begin{align*}
-	l = m = n
-\end{align*}
-
-Using the fundamental relation between direction cosines:
-\begin{align*}
-	l^2 + m^2 + n^2 &= 1 \\
-	l^2 + l^2 + l^2 &= 1 \\
-	3l^2 &= 1 \\
-	l^2 &= \frac{1}{3} \\
-	l &= \pm \frac{1}{\sqrt{3}}
-\end{align*}
-
-Since $l = m = n$:
-\begin{align*}
-	l = \pm \frac{1}{\sqrt{3}}, \quad m = \pm \frac{1}{\sqrt{3}}, \quad n = \pm \frac{1}{\sqrt{3}}
-\end{align*}
-
-Therefore, the direction cosines of the line are:
-\begin{align*}
-	\left(\frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}}\right) \quad \text{or} \quad \left(-\frac{1}{\sqrt{3}}, -\frac{1}{\sqrt{3}}, -\frac{1}{\sqrt{3}}\right)
-\end{align*}
-
-
-
-
-\item A line passes through the point with position vector $2\vec{i}-\vec{j}+4\vec{k}$ and is in the direction of the vector $\vec{i}+\vec{j}-2\vec{k}$. Find the equation of the line in Cartesian form.
+\item A line passes through the point with position vector $\vec{a} = \myvec{2 \\ -1 \\ 4}$ and is in the direction of the vector $\vec{b} = \myvec{1 \\ 1 \\ -2}$. Find the equation of the line in Cartesian form.
+\hfill (12~2019)
 
 \solution
-Let the given point through which the line passes be $A$, with position vector $\vec{a}$[cite: 3]:
-\begin{align*}
-	\vec{a} = 2\vec{i} - \vec{j} + 4\vec{k}
-\end{align*}
-The coordinates of point $A$ are:
-\begin{align*}
-	(x_1, y_1, z_1) = (2, -1, 4)
-\end{align*}
-
-The direction vector of the line is given as $\vec{b}$[cite: 3]:
-\begin{align*}
-	\vec{b} = \vec{i} + \vec{j} - 2\vec{k}
-\end{align*}
-Thus, the direction ratios of the line are:
-\begin{align*}
-	a = 1, \quad b = 1, \quad c = -2
-\end{align*}
-
-The Cartesian equation of a line passing through the point $(x_1, y_1, z_1)$ with direction ratios $a, b, c$ is given by:
-\begin{align*}
-	\frac{x - x_1}{a} = \frac{y - y_1}{b} = \frac{z - z_1}{c}
-\end{align*}
-
-Substituting the coordinates and direction ratios:
-\begin{align*}
-	\frac{x - 2}{1} = \frac{y - (-1)}{1} = \frac{z - 4}{-2}
-\end{align*}
-
-Simplifying the equation:
-\begin{align*}
+From \eqref{eq:CBSE12-2019-line_cart}, with point $\vec{a} = \myvec{x_1 \\ y_1 \\ z_1} = \myvec{2 \\ -1 \\ 4}$ and direction vector $\vec{b} = \myvec{a \\ b \\ c} = \myvec{1 \\ 1 \\ -2}$:
+\begin{align}
+	\frac{x - 2}{1} = \frac{y - \brak{-1}}{1} = \frac{z - 4}{-2}
+\end{align}
+Simplifying:
+\begin{align}
 	\frac{x - 2}{1} = \frac{y + 1}{1} = \frac{z - 4}{-2}
-\end{align*}
+\end{align}
+The following code gives the plot
+\begin{lstlisting}[frame=single, basicstyle=\ttfamily\small]
+	codes/12/q5.py
+\end{lstlisting}
 
-Therefore, the equation of the line in Cartesian form is:
-\begin{align*}
-	\frac{x - 2}{1} = \frac{y + 1}{1} = \frac{4 - z}{2} \quad \left(\text{or } \frac{x - 2}{1} = \frac{y + 1}{1} = \frac{z - 4}{-2}\right)
-\end{align*}
-
-\item Find 
-\[
-\int (3-2x-x^2)\,dx.
-\]
+\item Find $\displaystyle\int \brak{3 - 2x - x^2}\,dx$.
+\hfill (12~2019)
 
 \solution
-Let the given indefinite integral be:
-\begin{align*}
-	I = \int (3 - 2x - x^2)\,dx
-\end{align*}
+Let $I = \int \brak{3 - 2x - x^2}\,dx$.
+Applying linearity and the power integration rule \eqref{eq:CBSE12-2019-int_power}:
+\begin{align}
+	I &= \int 3\,dx - \int 2x\,dx - \int x^2\,dx \\
+	&= 3x - 2\brak{\frac{x^2}{2}} - \frac{x^3}{3} + C \\
+	&= 3x - x^2 - \frac{x^3}{3} + C
+\end{align}
 
-Using the linearity property of integration:
-\begin{align*}
-	I = \int 3\,dx - \int 2x\,dx - \int x^2\,dx
-\end{align*}
 
-Applying the standard power rule of integration $\displaystyle\int x^n\,dx = \frac{x^{n+1}}{n+1} + C$ (for $n \neq -1$):
-\begin{align*}
-	\int 3\,dx &= 3x \\
-	\int 2x\,dx &= 2\left(\frac{x^2}{2}\right) = x^2 \\
-	\int x^2\,dx &= \frac{x^3}{3}
-\end{align*}
-
-Combining the integrated terms and adding the arbitrary constant of integration $C$:
-\begin{align*}
-	I &= 3x - x^2 - \frac{x^3}{3} + C
-\end{align*}
-
-Therefore:
-\begin{align*}
-	\int (3 - 2x - x^2)\,dx = 3x - x^2 - \frac{1}{3}x^3 + C
-\end{align*}
-
-\item If
-\[
-A=\begin{bmatrix}p&2\\2&p\end{bmatrix}
-\quad\text{and}\quad |A^3|=125,
-\]
-then find the values of $p$.
+\item If $\vec{A} = \myvec{p & 2 \\ 2 & p}$ and $\mydet{\vec{A}^3} = 125$, find the values of $p$.
+\hfill (12~2019)
 
 \solution
-Given matrix $A$:
-\begin{align*}
-	A = \begin{bmatrix} p & 2 \\ 2 & p \end{bmatrix}
-\end{align*}
-
-Evaluating the determinant of matrix $A$:
-\begin{align*}
-	|A| &= \begin{vmatrix} p & 2 \\ 2 & p \end{vmatrix} = (p)(p) - (2)(2) = p^2 - 4
-\end{align*}
-
-Using the determinant power property for square matrices, $|A^n| = |A|^n$:
-\begin{align*}
-	|A^3| = |A|^3
-\end{align*}
-
-Given that $|A^3| = 125$:
-\begin{align*}
-	|A|^3 &= 125 \implies |A|^3 = 5^3 \implies |A| = 5
-\end{align*}
-
-Equating the two expressions for $|A|$:
-\begin{align*}
-	p^2 - 4 &= 5 \implies p^2 = 9 \implies p = \pm 3
-\end{align*}
-
-Therefore, the values of $p$ are $3$ and $-3$.
+From \eqref{eq:CBSE12-2019-det_2x2}, evaluating the determinant of $\vec{A}$:
+\begin{align}
+	\mydet{\vec{A}} = \mydet{\myvec{p & 2 \\ 2 & p}} = p^2 - 4
+\end{align}
+From \eqref{eq:CBSE12-2019-det_power}:
+\begin{align}
+	\mydet{\vec{A}^3} = \brak{\mydet{\vec{A}}}^3 = \brak{p^2 - 4}^3
+\end{align}
+Given that $\mydet{\vec{A}^3} = 125$:
+\begin{align}
+	\brak{p^2 - 4}^3 = 5^3 \implies p^2 - 4 = 5 \implies p^2 = 9 \implies p = \pm 3
+\end{align}
+Thus, the values of $p$ are $3$ and $-3$.
 
 
-\item Examine whether the operation $*$ defined on the set of all real numbers by
-\[
-a*b=a^2+b^2
-\]
-is a binary operation or not, and if it is a binary operation, find whether it is associative or not.
+\item Examine whether the operation $*$ defined on the set of all real numbers by $a*b = a^2 + b^2$ is a binary operation or not, and if it is a binary operation, find whether it is associative or not.
+\hfill (12~2019)
 
 \solution
+From \eqref{eq:CBSE12-2019-binary_closure}, for any $a, b \in \mathbb{R}$, $a^2 \in \mathbb{R}$ and $b^2 \in \mathbb{R}$. Since the sum of real numbers is real, $a^2 + b^2 \in \mathbb{R}$. Hence, $*$ is a well-defined binary operation on $\mathbb{R}$.
+To test associativity from \eqref{eq:CBSE12-2019-associative}:
+\begin{align}
+	\text{LHS:} \quad \brak{a * b} * c &= \brak{a^2 + b^2} * c = \brak{a^2 + b^2}^2 + c^2 \\
+	\text{RHS:} \quad a * \brak{b * c} &= a * \brak{b^2 + c^2} = a^2 + \brak{b^2 + c^2}^2
+\end{align}
+Choosing counterexample $a = 1, b = 2, c = 3 \in \mathbb{R}$:
+\begin{align}
+	\brak{1 * 2} * 3 &= \brak{1^2 + 2^2} * 3 = 5 * 3 = 5^2 + 3^2 = 25 + 9 = 34 \\
+	1 * \brak{2 * 3} &= 1 * \brak{2^2 + 3^2} = 1 * 13 = 1^2 + 13^2 = 1 + 169 = 170
+\end{align}
+Since $34 \neq 170$, the operation $*$ is **not associative**.
 
-An operation $*$ on the set of real numbers $\mathbb{R}$ is a binary operation if for every pair $(a, b) \in \mathbb{R} \times \mathbb{R}$, the image $a * b \in \mathbb{R}$.
-
-For any $a, b \in \mathbb{R}$:
-\begin{align*}
-	a \in \mathbb{R} &\implies a^2 \in \mathbb{R} &
-	b \in \mathbb{R} \implies b^2 \in \mathbb{R}
-\end{align*}
-Since the sum of two real numbers is always a real number:
-\begin{align*}
-	a^2 + b^2 \in \mathbb{R} \implies a * b \in \mathbb{R} \quad \forall a, b \in \mathbb{R}
-\end{align*}
-Therefore, $*$ is a well-defined binary operation on $\mathbb{R}$.
-
-The operation $*$ is associative on $\mathbb{R}$ if for all $a, b, c \in \mathbb{R}$:
-\begin{align*}
-	(a * b) * c = a * (b * c)
-\end{align*}
-
-Evaluating the Left-Hand Side (LHS):
-\begin{align*}
-	(a * b) * c &= (a^2 + b^2) * c = (a^2 + b^2)^2 + c^2 = a^4 + 2a^2b^2 + b^4 + c^2
-\end{align*}
-
-Evaluating the Right-Hand Side (RHS):
-\begin{align*}
-	a * (b * c) &= a * (b^2 + c^2) = a^2 + (b^2 + c^2)^2 = a^2 + b^4 + 2b^2c^2 + c^4
-\end{align*}
-
-In general:
-\begin{align*}
-	(a^2 + b^2)^2 + c^2 \neq a^2 + (b^2 + c^2)^2
-\end{align*}
-
-Choose $a = 1$, $b = 2$, and $c = 3 \in \mathbb{R}$:
-\begin{align*}
-	(1 * 2) * 3 &= (1^2 + 2^2) * 3 = (1 + 4) * 3 = 5 * 3 = 5^2 + 3^2 = 25 + 9 = 34
-\end{align*}
-\begin{align*}
-	1 * (2 * 3) &= 1 * (2^2 + 3^2) = 1 * (4 + 9) = 1 * 13 = 1^2 + 13^2 = 1 + 169 = 170
-\end{align*}
-Since $(1 * 2) * 3 \neq 1 * (2 * 3)$ ($34 \neq 170$), the operation $*$ is not associative.
-
-Conclusion:
-The operation $*$ is a binary operation, but it is not associative.
-
-
-\item If $|\vec a|=2$, $|\vec b|=7$ and
-\[
-\vec a\times\vec b=3\vec i+2\vec j+6\vec k,
-\]
-find the angle between $\vec a$ and $\vec b$.
+\item If $\norm{\vec{a}} = 2$, $\norm{\vec{b}} = 7$, and $\vec{a} \times \vec{b} = \myvec{3 \\ 2 \\ 6}$, find the angle between $\vec{a}$ and $\vec{b}$.
+\hfill (12~2019)
 
 \solution
-Let $\theta$ be the angle between the vectors $\vec{a}$ and $\vec{b}$, where $0 \le \theta \le \pi$.
-
-Given[cite: 1]:
-\begin{align*}
-	|\vec{a}| &= 2 & |\vec{b}| = 7 \\
-	\vec{a} \times \vec{b} &= 3\vec{i} + 2\vec{j} + 6\vec{k}
-\end{align*}
-
-Evaluating the magnitude of the cross product vector $\vec{a} \times \vec{b}$:
-\begin{align*}
-	|\vec{a} \times \vec{b}| &= \sqrt{3^2 + 2^2 + 6^2} = \sqrt{9 + 4 + 36} = \sqrt{49} = 7
-\end{align*}
-
-By the definition of the vector cross product:
-\begin{align*}
-	|\vec{a} \times \vec{b}| = |\vec{a}| |\vec{b}| \sin\theta
-\end{align*}
-
-Substituting the known values:
-\begin{align*}
-	7 &= (2)(7)\sin\theta \implies 7 = 14\sin\theta \\
-	\sin\theta &= \frac{7}{14} = \frac{1}{2}
-\end{align*}
-
-Since the angle between two vectors lies in the interval $[0, \pi]$:
-\begin{align*}
-	\theta = \frac{\pi}{6} \quad \text{or} \quad \theta = \pi - \frac{\pi}{6} = \frac{5\pi}{6}
-\end{align*}
-
-Therefore, the angle between $\vec{a}$ and $\vec{b}$ is $\dfrac{\pi}{6}$ (or $30^\circ$) or $\dfrac{5\pi}{6}$ (or $150^\circ$).
+Let $\theta$ be the angle between $\vec{a}$ and $\vec{b}$.
+Evaluating the magnitude of $\vec{a} \times \vec{b}$:
+\begin{align}
+	\norm{\vec{a} \times \vec{b}} = \sqrt{3^2 + 2^2 + 6^2} = \sqrt{9 + 4 + 36} = \sqrt{49} = 7
+\end{align}
+From \eqref{eq:CBSE12-2019-cross_norm} and \eqref{eq:CBSE12-2019-sin_theta}:
+\begin{align}
+	\sin\theta = \frac{\norm{\vec{a} \times \vec{b}}}{\norm{\vec{a}}\norm{\vec{b}}} = \frac{7}{2 \times 7} = \frac{1}{2}
+\end{align}
+Since $\theta \in [0, \pi]$:
+\begin{align}
+	\theta = \frac{\pi}{6} \quad \text{or} \quad \theta = \frac{5\pi}{6}
+\end{align}
 
 
-\item Find the volume of a cuboid whose edges are given by
-\[
--3\vec i+7\vec j+5\vec k,\vec
--5\vec i+7\vec j-3\vec k,\vec
-7\vec i-5\vec j-3\vec k.
-\]
+\item Find the volume of a cuboid whose edges are given by $\vec{a} = \myvec{-3 \\ 7 \\ 5}$, $\vec{b} = \myvec{-5 \\ 7 \\ -3}$, and $\vec{c} = \myvec{7 \\ -5 \\ -3}$.
+\hfill (12~2019)
 
 \solution
-The volume $V$ of a parallelepiped with coterminous edges $\vec{a}$, $\vec{b}$, and $\vec{c}$ is given by the magnitude of their scalar triple product:
-\begin{align*}
-	V = \left| [\vec{a}, \, \vec{b}, \, \vec{c}] \right| = \left| \vec{a} \cdot (\vec{b} \times \vec{c}) \right|
-\end{align*}
-
-Expressing the scalar triple product in determinant form:
-\begin{align*}
-	[\vec{a}, \, \vec{b}, \, \vec{c}] = \begin{vmatrix}
-		-3 & 7 & 5 \\
-		-5 & 7 & -3 \\
-		7 & -5 & -3
-	\end{vmatrix}
-\end{align*}
-
-Expanding the determinant along the first row:
-\begin{align*}
-	[\vec{a}, \, \vec{b}, \, \vec{c}] &= -3 \begin{vmatrix} 7 & -3 \\ -5 & -3 \end{vmatrix} - 7 \begin{vmatrix} -5 & -3 \\ 7 & -3 \end{vmatrix} + 5 \begin{vmatrix} -5 & 7 \\ 7 & -5 \end{vmatrix} \\
-	&= -3 \left[(7)(-3) - (-3)(-5)\right] - 7 \left[(-5)(-3) - (-3)(7)\right] + 5 \left[(-5)(-5) - (7)(7)\right] \implies = 108 - 252 - 120 \implies = -264
-\end{align*}
-
-Since volume is a non-negative scalar quantity:
-\begin{align*}
-	V = | -264 | = 264\text{ cubic units}
-\end{align*}
-
-Therefore, the volume of the given solid is 264 cubic units.
+From \eqref{eq:CBSE12-2019-scalar_triple_vol}, the volume $V$ of a parallelepiped (cuboid) is the absolute value of the scalar triple product:
+\begin{align}
+	V = \abs{\mydet{\vec{a} & \vec{b} & \vec{c}}} = \abs{\mydet{-3 & -5 & 7 \\ 7 & 7 & -5 \\ 5 & -3 & -3}}
+\end{align}
+Expanding the determinant:
+\begin{align}
+	\mydet{\vec{a} & \vec{b} & \vec{c}} &= -3\mydet{7 & -5 \\ -3 & -3} - \brak{-5}\mydet{7 & -5 \\ 5 & -3} + 7\mydet{7 & 7 \\ 5 & -3} \\
+	&= -3\brak{-21 - 15} + 5\brak{-21 - \brak{-25}} + 7\brak{-21 - 35} \\
+	&= -3\brak{-36} + 5\brak{4} + 7\brak{-56} = 108 + 20 - 392 = -264
+\end{align}
+Taking the absolute value:
+\begin{align}
+	V = \abs{-264} = 264\text{ cubic units}
+\end{align}
+The following code verifies the volume:
+\begin{lstlisting}[frame=single, basicstyle=\ttfamily\small]
+	codes/12/q10.py
+\end{lstlisting}
 
 
-
-\item A coin is tossed 5 times. What is the probability of getting (i) 3 heads, (ii) at most 3 heads?
+\item A coin is tossed $5$ times. What is the probability of getting (i) $3$ heads, (ii) at most $3$ heads?
+\hfill (12~2019)
 
 \solution
-Tossing a fair coin represents a sequence of Bernoulli trials where:
-\begin{align*}
-	\text{Probability of getting a head (success), } p &= \frac{1}{2} \\
-	\text{Probability of getting a tail (failure), } q &= 1 - p = 1 - \frac{1}{2} = \frac{1}{2}
-\end{align*}
+Let $X$ denote the number of heads obtained in $n = 5$ independent coin tosses. This represents a sequence of Bernoulli trials with success probability $p = \frac{1}{2}$ and failure probability $q = 1 - p = \frac{1}{2}$.
+From the binomial distribution formula \eqref{eq:CBSE12-2019-binomial_pmf}:
+\begin{align}
+	\pr{X = k} = \binom{n}{k} p^k q^{n-k} = \binom{5}{k} \brak{\frac{1}{2}}^k \brak{\frac{1}{2}}^{5-k} = \frac{\binom{5}{k}}{32}
+\end{align}
 
-The probability of obtaining exactly $k$ heads in $n = 5$ tosses is given by the binomial distribution:
-\begin{align*}
-	P(X = k) = \binom{n}{k} p^k q^{n-k} = \binom{5}{k} \left(\frac{1}{2}\right)^k \left(\frac{1}{2}\right)^{5-k} = \binom{5}{k} \left(\frac{1}{2}\right)^5 = \frac{\binom{5}{k}}{32}
-\end{align*}
+(i) Probability of getting exactly $3$ heads ($k = 3$):
+\begin{align}
+	\pr{X = 3} = \frac{\binom{5}{3}}{32} = \frac{10}{32} = \frac{5}{16}
+\end{align}
 
-Substituting $k = 3$:
-\begin{align*}
-	P(X = 3) &= \binom{5}{3} \left(\frac{1}{2}\right)^5 = \frac{5!}{3!(5-3)!} \times \frac{1}{32} = \frac{5 \times 4}{2 \times 1} \times \frac{1}{32} = \frac{10}{32} = \frac{5}{16}
-\end{align*}
-
-\begin{align*}
-	P(X \le 3) = P(X = 0) + P(X = 1) + P(X = 2) + P(X = 3)
-\end{align*}
-
-\begin{align*}
-	P(X \le 3) &= 1 - P(X > 3) = 1 - \left[ P(X = 4) + P(X = 5) \right]
-\end{align*}
-
-\begin{align*}
-	P(X = 4) &= \binom{5}{4} \left(\frac{1}{2}\right)^5 = \frac{5}{32} \\
-	P(X = 5) &= \binom{5}{5} \left(\frac{1}{2}\right)^5 = \frac{1}{32}
-\end{align*}
-
-Substituting into the complement relation:
-\begin{align*}
-	P(X \le 3) &= 1 - \left(\frac{5}{32} + \frac{1}{32}\right) = 1 - \frac{6}{32} = \frac{26}{32} = \frac{13}{16}
-\end{align*}
-
-\begin{align*}
-	\text{The probability of getting 3 heads is $\dfrac{5}{16}$}.\\
-	\text{The probability of getting at most 3 heads is $\dfrac{13}{16}$}.
-\end{align*}
-
+(ii) Probability of getting at most $3$ heads ($\pr{X \le 3}$):
+Using the complement relation from \eqref{eq:CBSE12-2019-binomial_cdf}:
+\begin{align}
+	\pr{X \le 3} &= 1 - \sbrak{\pr{X = 4} + \pr{X = 5}} \\
+	&= 1 - \left(\frac{\binom{5}{4}}{32} + \frac{\binom{5}{5}}{32}\right) = 1 - \frac{5 + 1}{32} = 1 - \frac{6}{32} = \frac{26}{32} = \frac{13}{16}
+\end{align}
 
 
 \item Find the probability distribution of $X$, the number of heads in a simultaneous toss of two coins.
+\hfill (12~2019)
 
 \solution
-When two coins are tossed simultaneously, the sample space $S$ is given by:
-\begin{align*}
-	S = \{HH, \, HT, \, TH, \, TT\}
-\end{align*}
-The total number of elementary events is $n(S) = 4$.
-
-	 $X = 0$: No heads appear, i.e., outcome $\{TT\}$:
-	\begin{align*}
-		P(X = 0) = \frac{n(\{TT\})}{n(S)} = \frac{1}{4}
-	\end{align*}
-	
-	 $X = 1$: Exactly one head appears, i.e., outcomes $\{HT, TH\}$:
-	\begin{align*}
-		P(X = 1) = \frac{n(\{HT, TH\})}{n(S)} = \frac{2}{4} = \frac{1}{2}
-	\end{align*}
-	
-	 $X = 2$: Two heads appear, i.e., outcome $\{HH\}$:
-	\begin{align*}
-		P(X = 2) = \frac{n(\{HH\})}{n(S)} = \frac{1}{4}
-	\end{align*}
-
-Verifying the sum of probabilities over the state space:
-\begin{align*}
-	\sum P(X) = P(X = 0) + P(X = 1) + P(X = 2) = \frac{1}{4} + \frac{2}{4} + \frac{1}{4} = 1
-\end{align*}
+When two fair coins are tossed simultaneously, the sample space $S$ is:
+\begin{align}
+	S = \{\text{HH}, \, \text{HT}, \, \text{TH}, \, \text{TT}\}
+\end{align}
+Let $X$ be the random variable representing the number of heads. The possible values of $X$ are $0, 1, 2$.
+From \eqref{eq:CBSE12-2019-prob_dist_axioms}:
+\begin{align}
+	\pr{X = 0} &= \frac{n(\{\text{TT}\})}{n(S)} = \frac{1}{4} \\
+	\pr{X = 1} &= \frac{n(\{\text{HT}, \text{TH}\})}{n(S)} = \frac{2}{4} = \frac{1}{2} \\
+	\pr{X = 2} &= \frac{n(\{\text{HH}\})}{n(S)} = \frac{1}{4}
+\end{align}
+Verifying the distribution sum:
+\begin{align}
+	\sum_{x=0}^{2} \pr{X = x} = \frac{1}{4} + \frac{1}{2} + \frac{1}{4} = 1
+\end{align}
 
 
-\item Find:
-\[
-\int \frac{\sin^3x+\cos^3x}{\sin^2x\cos^2x}\,dx.
-\]
+\item Find $\displaystyle\int \frac{\sin^3 x + \cos^3 x}{\sin^2 x \cos^2 x}\,dx$.
+\hfill (12~2019)
 
 \solution
-\begin{align*}
-	\frac{\sin^3x + \cos^3x}{\sin^2x \cos^2x} &= \frac{\sin^3x}{\sin^2x \cos^2x} + \frac{\cos^3x}{\sin^2x \cos^2x} = \frac{\sin x}{\cos^2x} + \frac{\cos x}{\sin^2x} \\
-	&= \left(\frac{\sin x}{\cos x}\right)\left(\frac{1}{\cos x}\right) + \left(\frac{\cos x}{\sin x}\right)\left(\frac{1}{\sin x}\right) = \sec x \tan x + \csc x \cot x
-\end{align*}
+Let $I = \int \frac{\sin^3 x + \cos^3 x}{\sin^2 x \cos^2 x}\,dx$.
+Splitting the fraction into two terms:
+\begin{align}
+	\frac{\sin^3 x + \cos^3 x}{\sin^2 x \cos^2 x} &= \frac{\sin^3 x}{\sin^2 x \cos^2 x} + \frac{\cos^3 x}{\sin^2 x \cos^2 x} \\
+	&= \frac{\sin x}{\cos^2 x} + \frac{\cos x}{\sin^2 x} \\
+	&= \brak{\frac{\sin x}{\cos x}}\brak{\frac{1}{\cos x}} + \brak{\frac{\cos x}{\sin x}}\brak{\frac{1}{\sin x}} \\
+	&= \sec x \tan x + \csc x \cot x
+\end{align}
+Integrating term-by-term using \eqref{eq:CBSE12-2019-int_sec_tan} and \eqref{eq:CBSE12-2019-int_csc_cot}:
+\begin{align}
+	I &= \int \brak{\sec x \tan x + \csc x \cot x}\,dx \\
+	&= \int \sec x \tan x\,dx + \int \csc x \cot x\,dx \\
+	&= \sec x - \csc x + C
+\end{align}
 
-\begin{align*}
-	I &= \int \left(\sec x \tan x + \csc x \cot x\right)\,dx = \int \sec x \tan x\,dx + \int \csc x \cot x\,dx \\
-	I &= \sec x - \csc x + C
-\end{align*}
 
-
-
-\item Find:
-\[
-\int (x-1)e^{x^3-x}\,dx.
-\]
-
-\solution
-Expressing the numerator in terms of $(x - 1)$:
-\begin{align*}
-	\frac{x - 3}{(x - 1)^3} &= \frac{(x - 1) - 2}{(x - 1)^3} = \frac{x - 1}{(x - 1)^3} - \frac{2}{(x - 1)^3} = \frac{1}{(x - 1)^2} - \frac{2}{(x - 1)^3}
-\end{align*}
-
-Substituting this back into the integral:
-\begin{align*}
-	I = \int e^x \left[ \frac{1}{(x - 1)^2} - \frac{2}{(x - 1)^3} \right] dx
-\end{align*}
-
-Let:
-\begin{align*}
-	f(x) = \frac{1}{(x - 1)^2} = (x - 1)^{-2}
-\end{align*}
-
-Differentiating $f(x)$ with respect to $x$:
-\begin{align*}
-	f'(x) = -2(x - 1)^{-3} = -\frac{2}{(x - 1)^3}
-\end{align*}
-
-The integrand is now in the standard form $\displaystyle\int e^x \left[ f(x) + f'(x) \right] dx$:
-\begin{align*}
-	I &= \int \frac{e^x}{(x - 1)^2}\,dx - \int \frac{2e^x}{(x - 1)^3}\,dx
-\end{align*}
-
-Integrating the first integral by parts:
-\begin{align*}
-	\int u\,dv = u v - \int v\,du
-\end{align*}
-Setting $u = \dfrac{1}{(x - 1)^2}$ and $dv = e^x\,dx \implies du = -\dfrac{2}{(x - 1)^3}\,dx$ and $v = e^x$:
-\begin{align*}
-	\int \frac{e^x}{(x - 1)^2}\,dx &= \frac{e^x}{(x - 1)^2} - \int e^x \left( -\frac{2}{(x - 1)^3} \right) dx \\
-	&= \frac{e^x}{(x - 1)^2} + \int \frac{2e^x}{(x - 1)^3}\,dx
-\end{align*}
-
-Substituting this expression back into $I$:
-\begin{align*}
-	I &= \left[ \frac{e^x}{(x - 1)^2} + \int \frac{2e^x}{(x - 1)^3}\,dx \right] - \int \frac{2e^x}{(x - 1)^3}\,dx + C = \frac{e^x}{(x - 1)^2} + C
-\end{align*}
-
-\item If $P(\text{not }A)=0.7$, $P(B)=0.7$ and $P(B/A)=0.5$, then find $P(A/B)$.
+\item Find $\displaystyle\int \frac{x - 3}{\brak{x - 1}^3} e^x\,dx$.
+\hfill (12~2019)
 
 \solution
-First, find the probability of event $A$ using the complement rule:
-\begin{align*}
-	P(A) &= 1 - P(A') 
-	= 1 - 0.7 
-	= 0.3
-\end{align*}
+Let $I = \int \frac{x - 3}{\brak{x - 1}^3} e^x\,dx$.
+Expressing the numerator in terms of $\brak{x - 1}$:
+\begin{align}
+	\frac{x - 3}{\brak{x - 1}^3} = \frac{\brak{x - 1} - 2}{\brak{x - 1}^3} = \frac{1}{\brak{x - 1}^2} - \frac{2}{\brak{x - 1}^3}
+\end{align}
+Let $f(x) = \frac{1}{\brak{x - 1}^2} = \brak{x - 1}^{-2}$. Its derivative is:
+\begin{align}
+	f'(x) = -2\brak{x - 1}^{-3} = -\frac{2}{\brak{x - 1}^3}
+\end{align}
+Using the standard exponential integral formula \eqref{eq:CBSE12-2019-exp_f_plus_fprime}:
+\begin{align}
+	\int e^x \sbrak{f(x) + f'(x)}\,dx = e^x f(x) + C
+\end{align}
+Substituting $f(x)$:
+\begin{align}
+	I = \int e^x \sbrak{\frac{1}{\brak{x - 1}^2} - \frac{2}{\brak{x - 1}^3}}\,dx = \frac{e^x}{\brak{x - 1}^2} + C
+\end{align}
 
-Using the definition of conditional probability for $P(B/A)$:
-\begin{align*}
-	P(B/A) &= \frac{P(A \cap B)}{P(A)}
-\end{align*}
 
-Substituting the known values to determine the joint probability $P(A \cap B)$:
-\begin{align*}
-	0.5 &= \frac{P(A \cap B)}{0.3} \\
-	P(A \cap B) &= 0.5 \times 0.3 = 0.15
-\end{align*}
-
-Now, evaluate the conditional probability $P(A/B)$[cite: 1]:
-\begin{align*}
-	P(A/B) &= \frac{P(A \cap B)}{P(B)} 
-	= \frac{0.15}{0.7} 
-	= \frac{15}{70} 
-	= \frac{3}{14} \approx 0.2143
-\end{align*}
-
-\item Find the general solution of the differential equation
-\[
-\frac{dy}{dx}=e^{x+y}.
-\]
+\item If $\pr{\text{not } A} = 0.7$, $\pr{B} = 0.7$, and $\pr{B \mid A} = 0.5$, find $\pr{A \mid B}$.
+\hfill (12~2019)
 
 \solution
-The given first-order differential equation is[cite: 1]:
-\begin{align*}
-	\frac{dy}{dx} &= e^{x+y} \implies
-	\frac{dy}{dx} = e^x e^y
-\end{align*}
-
-Separating the variables:
-\begin{align*}
-	\frac{1}{e^y}\,dy = e^x\,dx \implies e^{-y}\,dy = e^x\,dx
-\end{align*}
-
-\begin{align*}
-	-e^{-y} = e^x + C_1
-\end{align*}
-where $C_1$ is an arbitrary constant of integration.
-
-Rearranging the terms:
-\begin{align*}
-	e^x + e^{-y} &= -C_1 \implies e^x + e^{-y} = C 
-\end{align*}
+From the complement rule, $\pr{A} = 1 - \pr{\text{not } A} = 1 - 0.7 = 0.3$.
+From the definition of conditional probability \eqref{eq:CBSE12-2019-cond_prob}:
+\begin{align}
+	\pr{B \mid A} = \frac{\pr{A \cap B}}{\pr{A}} \implies 0.5 = \frac{\pr{A \cap B}}{0.3} \implies \pr{A \cap B} = 0.15
+\end{align}
+Now, computing $\pr{A \mid B}$ via \eqref{eq:CBSE12-2019-cond_prob}:
+\begin{align}
+	\pr{A \mid B} = \frac{\pr{A \cap B}}{\pr{B}} = \frac{0.15}{0.7} = \frac{15}{70} = \frac{3}{14} \approx 0.2143
+\end{align}
 
 
-
-\item Find the value of
-\[
-\sin\left(\cos^{-1}\frac45+\tan^{-1}\frac23\right).
-\]
+\item Find the general solution of the differential equation $\dfrac{dy}{dx} = e^{x+y}$.
+\hfill (12~2019)
 
 \solution
-Expressing $\cos^{-1}\left(\frac{4}{5}\right)$ in terms of $\tan^{-1}$:
-\begin{align*}
-	\cos^{-1}\frac{4}{5} = \tan^{-1}\left(\frac{\sqrt{1 - (4/5)^2}}{4/5}\right) = \tan^{-1}\left(\frac{3/5}{4/5}\right) = \tan^{-1}\frac{3}{4}
-\end{align*}
+Using index laws, the differential equation can be separated:
+\begin{align}
+	\frac{dy}{dx} = e^x e^y \implies e^{-y}\,dy = e^x\,dx
+\end{align}
+Integrating both sides using \eqref{eq:CBSE12-2019-sep_vars}:
+\begin{align}
+	\int e^{-y}\,dy = \int e^x\,dx \implies -e^{-y} = e^x + C_1
+\end{align}
+Rearranging terms:
+\begin{align}
+	e^x + e^{-y} = C \quad \text{where } C = -C_1
+\end{align}
 
-Using the addition formula $\tan^{-1}x + \tan^{-1}y = \tan^{-1}\left(\dfrac{x+y}{1-xy}\right)$ for $xy = \frac{3}{4} \times \frac{2}{3} = \frac{1}{2} < 1$:
-\begin{align*}
-	\tan^{-1}\frac{3}{4} + \tan^{-1}\frac{2}{3} = \tan^{-1}\left(\frac{\frac{3}{4} + \frac{2}{3}}{1 - \frac{3}{4} \cdot \frac{2}{3}}\right) = \tan^{-1}\left(\frac{\frac{17}{12}}{1 - \frac{6}{12}}\right) = \tan^{-1}\left(\frac{17/12}{6/12}\right) \\ =\tan^{-1}\frac{17}{6}
-\end{align*}
 
-Let $\theta = \tan^{-1}\left(\frac{17}{6}\right)$, then $\sin\theta = \dfrac{17}{\sqrt{17^2 + 6^2}} = \dfrac{17}{\sqrt{289 + 36}} = \dfrac{17}{\sqrt{325}} = \dfrac{17}{5\sqrt{13}} = \dfrac{17\sqrt{13}}{65}$.
+\item Find the value of $\sin\left(\cos^{-1}\frac{4}{5} + \tan^{-1}\frac{2}{3}\right)$.
+\hfill (12~2019)
+
+\solution
+From \eqref{eq:CBSE12-2019-arccos_to_arctan}, converting $\cos^{-1}\brak{\frac{4}{5}}$ to $\tan^{-1}$:
+\begin{align}
+	\cos^{-1}\frac{4}{5} = \tan^{-1}\left(\frac{\sqrt{1 - \brak{4/5}^2}}{4/5}\right) = \tan^{-1}\left(\frac{3/5}{4/5}\right) = \tan^{-1}\frac{3}{4}
+\end{align}
+Using the addition formula \eqref{eq:CBSE12-2019-arctan_add} for $\tan^{-1}\frac{3}{4} + \tan^{-1}\frac{2}{3}$ (since $uv = \frac{3}{4}\cdot\frac{2}{3} = \frac{1}{2} < 1$):
+\begin{align}
+	\tan^{-1}\frac{3}{4} + \tan^{-1}\frac{2}{3} &= \tan^{-1}\left(\frac{\frac{3}{4} + \frac{2}{3}}{1 - \frac{3}{4} \cdot \frac{2}{3}}\right) \\
+	&= \tan^{-1}\left(\frac{\frac{17}{12}}{1 - \frac{6}{12}}\right) = \tan^{-1}\left(\frac{17/12}{6/12}\right) = \tan^{-1}\frac{17}{6}
+\end{align}
+Let $\theta = \tan^{-1}\frac{17}{6}$. From \eqref{eq:CBSE12-2019-sin_arctan}:
+\begin{align}
+	\sin\brak{\tan^{-1}\frac{17}{6}} = \frac{17}{\sqrt{17^2 + 6^2}} = \frac{17}{\sqrt{289 + 36}} = \frac{17}{\sqrt{325}} = \frac{17}{5\sqrt{13}} = \frac{17\sqrt{13}}{65}
+\end{align}
 
 
 \item Using properties of determinants, show that
-\[
-\begin{vmatrix}
-3a&-a+b&-a+c\\
--b+a&3b&-b+c\\
--c+a&-c+b&3c
-\end{vmatrix}
-=3(a+b+c)(ab+bc+ca).
-\]
+\begin{align}
+	\mydet{
+		3a & -a+b & -a+c \\
+		-b+a & 3b & -b+c \\
+		-c+a & -c+b & 3c
+	} = 3\brak{a+b+c}\brak{ab+bc+ca}
+\end{align}
+\hfill (12~2019)
 
 \solution
-
-\text{Column Transformation to extract the factor $(a+b+c)$}
-
-Applying the elementary column operation $C_1 \to C_1 + C_2 + C_3$:
-Substituting back into the determinant:
-\begin{align*}
-	\Delta = \begin{vmatrix}
-		a+b+c & b-a & c-a \\
-		a+b+c & 3b & c-b \\
-		a+b+c & b-c & 3c
-	\end{vmatrix}
-\end{align*}
-
-Factoring out the common scalar $(a+b+c)$ from column $C_1$:
-\begin{align*}
-	\Delta = (a+b+c) \begin{vmatrix}
-		1 & b-a & c-a \\
-		1 & 3b & c-b \\
-		1 & b-c & 3c
-	\end{vmatrix}
-\end{align*}
-
-\text{Row Transformations to generate leading zeros}
-
-Applying $R_2 \to R_2 - R_1$ and $R_3 \to R_3 - R_1$:
-
-	For $R_2 \to R_2 - R_1$:
-	\begin{align*}
-		1 - 1 &= 0 \implies
-		3b - (b-a) = 2b + a = a + 2b \implies
-		(c-b) - (c-a) = a - b
-	\end{align*}
-	For $R_3 \to R_3 - R_1$:
-	\begin{align*}
-		1 - 1 &= 0 \implies
-		(b-c) - (b-a) = a - c \implies
-		3c - (c-a) = 2c + a = a + 2c
-	\end{align*}
-
-The determinant transforms to:
-\begin{align*}
-	\Delta = (a+b+c) \begin{vmatrix}
-		1 & b-a & c-a \\
+Let $\Delta$ denote the given determinant. Applying the column operation $C_1 \to C_1 + C_2 + C_3$ in accordance with \eqref{eq:CBSE12-2019-det_shear_invariance}:
+\begin{align}
+	\Delta = \mydet{
+		a+b+c & -a+b & -a+c \\
+		a+b+c & 3b & -b+c \\
+		a+b+c & -c+b & 3c
+	}
+\end{align}
+Factoring out $\brak{a+b+c}$ from column $C_1$:
+\begin{align}
+	\Delta = \brak{a+b+c} \mydet{
+		1 & -a+b & -a+c \\
+		1 & 3b & -b+c \\
+		1 & -c+b & 3c
+	}
+\end{align}
+Applying row operations $R_2 \to R_2 - R_1$ and $R_3 \to R_3 - R_1$:
+\begin{align}
+	\Delta = \brak{a+b+c} \mydet{
+		1 & -a+b & -a+c \\
 		0 & a+2b & a-b \\
 		0 & a-c & a+2c
-	\end{vmatrix}
-\end{align*}
-
-\begin{align*}
-	\Delta &= (a+b+c) \left[ 1 \cdot \begin{vmatrix} a+2b & a-b \\ a-c & a+2c \end{vmatrix} - 0 + 0 \right] \\
-	&= (a+b+c) \left[ (a+2b)(a+2c) - (a-b)(a-c) \right]
-\end{align*}
-
-\begin{align*}
-	(a+2b)(a+2c) &= a^2 + 2ac + 2ab + 4bc \implies
-	(a-b)(a-c) = a^2 - ac - ab + bc
-\end{align*}
-
-\begin{align*}
-	(a+2b)(a+2c) - (a-b)(a-c) &= (a^2 + 2ab + 2ac + 4bc) - (a^2 - ab - ac + bc) = 3ab + 3bc + 3ca \\
-	&= 3(ab + bc + ca)
-\end{align*}
-
-\begin{align*}
-	\Delta = 3(a+b+c)(ab+bc+ca)
-\end{align*}
+	}
+\end{align}
+Expanding along column $C_1$:
+\begin{align}
+	\Delta &= \brak{a+b+c} \mydet{a+2b & a-b \\ a-c & a+2c} \\
+	&= \brak{a+b+c} \sbrak{\brak{a+2b}\brak{a+2c} - \brak{a-b}\brak{a-c}} \\
+	&= \brak{a+b+c} \sbrak{\brak{a^2 + 2ac + 2ab + 4bc} - \brak{a^2 - ac - ab + bc}} \\
+	&= \brak{a+b+c}\brak{3ab + 3bc + 3ca} \\
+	&= 3\brak{a+b+c}\brak{ab + bc + ca}
+\end{align}
 
 
-\item Check whether the relation $R$ defined on the set
-$A=\{1,2,3,4,5,6\}$ a $R=\{(a,b):b=a+1\}$ is reflexive, symmetric or transitive.
+\item Check whether the relation $R$ defined on the set $A = \{1, 2, 3, 4, 5, 6\}$ by $R = \{(a, b) : b = a + 1\}$ is reflexive, symmetric or transitive.
+\hfill (12~2019)
 
 \solution
-Listing all ordered pairs $(a, b) \in R$:
-\begin{itemize}
-	\item For $a = 1 \implies b = 1 + 1 = 2 \in A \implies (1, 2) \in R$
-	\item For $a = 2 \implies b = 2 + 1 = 3 \in A \implies (2, 3) \in R$
-	\item For $a = 3 \implies b = 3 + 1 = 4 \in A \implies (3, 4) \in R$
-	\item For $a = 4 \implies b = 4 + 1 = 5 \in A \implies (4, 5) \in R$
-	\item For $a = 5 \implies b = 5 + 1 = 6 \in A \implies (5, 6) \in R$
-	\item For $a = 6 \implies b = 6 + 1 = 7 \notin A$
-\end{itemize}
 
-Thus, in roster form:
-\begin{align*}
+Listing all ordered pairs satisfying $b = a + 1$ for $a, b \in A$:
+\begin{align}
 	R = \{(1, 2), \, (2, 3), \, (3, 4), \, (4, 5), \, (5, 6)\}
-\end{align*}
+\end{align}
 
-Reflexivity:
-A relation $R$ on set $A$ is reflexive if $(a, a) \in R$ for all $a \in A$.
-\begin{align*}
-	(1, 1) \notin R \quad (\text{since } 1 \ne 1 + 1)
-\end{align*}
+\begin{itemize}
+	\item \textbf{Reflexivity:} A relation is reflexive if $(a, a) \in R$ for all $a \in A$. Since $(1, 1) \notin R$, the relation is \textbf{not reflexive}.
+	\item \textbf{Symmetry:} A relation is symmetric if $(a, b) \in R \implies (b, a) \in R$. Since $(1, 2) \in R$ but $(2, 1) \notin R$, the relation is \textbf{not symmetric}.
+	\item \textbf{Transitivity:} A relation is transitive if $(a, b) \in R$ and $(b, c) \in R \implies (a, c) \in R$. Since $(1, 2) \in R$ and $(2, 3) \in R$ but $(1, 3) \notin R$, the relation is \textbf{not transitive}.
+\end{itemize}
+Thus, $R$ is neither reflexive, nor symmetric, nor transitive.
 
-Symmetry:
-A relation $R$ on set $A$ is symmetric if $(a, b) \in R \implies (b, a) \in R$.
-\begin{align*}
-	(1, 2) \in R, \quad \text{but} \quad (2, 1) \notin R \quad (\text{since } 1 \ne 2 + 1)
-\end{align*}
-
-Transitivity:
-A relation $R$ on set $A$ is transitive if $(a, b) \in R$ and $(b, c) \in R \implies (a, c) \in R$.
-\begin{align*}
-	(1, 2) \in R \quad \text{and} \quad (2, 3) \in R, \quad \text{but} \quad (1, 3) \notin R \quad (\text{since } 3 \ne 1 + 1)
-\end{align*}
-
-Conclusion:
-The relation $R$ is neither reflexive, nor symmetric, nor transitive.
-
-
-\item Let $f:\mathbb N\to Y$ be a function defined as $f(x)=4x+3$, where
-\[
-Y=\{y\in\mathbb N:y=4x+3\text{ for some }x\in\mathbb N\}.
-\]
-Show that $f$ is invertible. Find its inverse.
+\item Let $f:\mathbb{N}\to Y$ be a function defined as $f(x)=4x+3$, where $Y=\{y\in\mathbb{N}:y=4x+3\text{ for some }x\in\mathbb{N}\}$. Show that $f$ is invertible. Find its inverse.
+\hfill (12~2019)
 
 \solution
-A function is invertible if and only if it is a bijection (both one-one and onto).
-
-Injectivity (One-One):
-Let $x_1, x_2 \in \mathbb{N}$ such that:
-\begin{align*}
-	f(x_1) &= f(x_2) \\
-	4x_1 + 3 = 4x_2 + 3 \implies
-	4x_1 = 4x_2 \implies
-	x_1 = x_2
-\end{align*}
-Since $f(x_1) = f(x_2) \implies x_1 = x_2$ for all $x_1, x_2 \in \mathbb{N}$, the function $f$ is injective (one-one).
-
-Surjectivity (Onto):
-Let $y \in Y$ be an arbitrary element. By the definition of set $Y$[cite: 1]:
-\begin{align*}
-	y = 4x + 3 \quad \text{for some } x \in \mathbb{N}
-\end{align*}
-Solving for $x$ in terms of $y$:
-\begin{align*}
-	4x &= y - 3 \implies
-	x = \frac{y - 3}{4}
-\end{align*}
-Since $y \in Y$, by construction $\dfrac{y - 3}{4}$ is guaranteed to be a natural number $x \in \mathbb{N}$ such that:
-\begin{align*}
-	f(x) = f\left(\frac{y - 3}{4}\right) = 4\left(\frac{y - 3}{4}\right) + 3 = (y - 3) + 3 = y
-\end{align*}
-Thus, every element in codomain $Y$ has a pre-image in domain $\mathbb{N}$. Therefore, $f$ is surjective (onto).
-
-Finding the Inverse Function $f^{-1}$:
-Define a function $g: Y \to \mathbb{N}$ by:
-\begin{align*}
-	g(y) = \frac{y - 3}{4}
-\end{align*}
-
-\begin{align*}
+From \eqref{eq:CBSE12-2019-injective}, to prove $f$ is injective (one-one), let $f(x_1) = f(x_2)$ for $x_1, x_2 \in \mathbb{N}$:
+\begin{align}
+	4x_1 + 3 = 4x_2 + 3 \implies 4x_1 = 4x_2 \implies x_1 = x_2
+\end{align}
+Thus, $f$ is injective.
+From \eqref{eq:CBSE12-2019-surjective}, for any $y \in Y$, by definition $y = 4x + 3$ for some $x \in \mathbb{N}$. Solving for $x$:
+\begin{align}
+	x = \frac{y - 3}{4} \in \mathbb{N}
+\end{align}
+Since every $y \in Y$ has a pre-image in $\mathbb{N}$, $f$ is surjective (onto).
+Since $f$ is both injective and surjective, it is bijective and hence invertible.
+Defining the inverse function $f^{-1}: Y \to \mathbb{N}$:
+\begin{align}
 	f^{-1}(y) = \frac{y - 3}{4}
-\end{align*}
+\end{align}
 
-\item If $x\sqrt{1+y}+y\sqrt{1+x}=0,\qquad x\ne y$,prove that $\frac{dy}{dx}=-\frac{1}{(x+1)^2}$.
-
-\solution
-\begin{align*}
-	x^2(1+y) &= y^2(1+x) \implies
-	x^2 + x^2y = y^2 + xy^2 \implies
-	(x^2 - y^2) + (x^2y - xy^2) = 0
-\end{align*}
-
-Factoring the algebraic expression:
-\begin{align*}
-	(x - y)(x + y) + xy(x - y) &= 0 \implies
-	(x - y)\left(x + y + xy\right) = 0
-\end{align*}
-
-\begin{align*}
-	x + y + xy = 0
-\end{align*}
-
-\begin{align*}
-	y(1 + x) &= -x \implies
-	y = -\frac{x}{1 + x}
-\end{align*}
-
-Rewriting the expression to simplify differentiation:
-\begin{align*}
-	y = -\frac{(x + 1) - 1}{x + 1} = -\left(1 - \frac{1}{x+1}\right) = -1 + (x+1)^{-1}
-\end{align*}
-
-Differentiating both sides with respect to $x$:
-\begin{align*}
-	\frac{dy}{dx} &= \frac{d}{dx}\left[ -1 + (x+1)^{-1} \right] 
-	= -\frac{1}{(x+1)^2}
-\end{align*}
-
-
-\item If $(\cos x)^y=(\sin y)^x$, find $\dfrac{dy}{dx}$.
+\item If $x\sqrt{1+y}+y\sqrt{1+x}=0$, where $x \neq y$, prove that $\dfrac{dy}{dx} = -\dfrac{1}{\brak{x+1}^2}$.
+\hfill (12~2019)
 
 \solution
-Taking the natural logarithm on both sides:
-\begin{align*}
-	\ln\left((\cos x)^y\right) &= \ln\left((\sin y)^x\right) \\
-	y \ln(\cos x) &= x \ln(\sin y)
-\end{align*}
+Rearranging the given equation:
+\begin{align}
+	x\sqrt{1+y} &= -y\sqrt{1+x}
+\end{align}
+Squaring both sides:
+\begin{align}
+	x^2\brak{1+y} &= y^2\brak{1+x} \\
+	x^2 + x^2y &= y^2 + xy^2 \\
+	x^2 - y^2 + x^2y - xy^2 &= 0 \\
+	\brak{x - y}\brak{x + y} + xy\brak{x - y} &= 0 \\
+	\brak{x - y}\sbrak{x + y + xy} &= 0
+\end{align}
+Since $x \neq y$, we have $x - y \neq 0$, which implies:
+\begin{align}
+	x + y + xy = 0 \implies y\brak{1 + x} = -x \implies y = -\frac{x}{1 + x}
+\end{align}
+Rewriting $y$ to facilitate differentiation:
+\begin{align}
+	y = -\frac{\brak{x + 1} - 1}{x + 1} = -\brak{1 - \frac{1}{x+1}} = -1 + \brak{x+1}^{-1}
+\end{align}
+Differentiating with respect to $x$:
+\begin{align}
+	\frac{dy}{dx} = \frac{d}{dx}\sbrak{-1 + \brak{x+1}^{-1}} = -\brak{x+1}^{-2}\cdot 1 = -\frac{1}{\brak{x+1}^2}
+\end{align}
 
-Differentiating both sides with respect to $x$:
-\begin{align*}
-	\frac{d}{dx}\left[y \ln(\cos x)\right] &= \frac{d}{dx}\left[x \ln(\sin y)\right] \\
-	\frac{dy}{dx} \cdot \ln(\cos x) + y \cdot \frac{d}{dx}[\ln(\cos x)] &= \frac{dx}{dx} \cdot \ln(\sin y) + x \cdot \frac{d}{dx}[\ln(\sin y)] \\
-	\frac{dy}{dx} \ln(\cos x) + y \left(\frac{1}{\cos x} \cdot (-\sin x)\right) &= 1 \cdot \ln(\sin y) + x \left(\frac{1}{\sin y} \cdot \cos y \cdot \frac{dy}{dx}\right) \\
-	\frac{dy}{dx} \ln(\cos x) - y \tan x &= \ln(\sin y) + x \cot y \frac{dy}{dx}
-\end{align*}
 
-Collecting all terms involving $\dfrac{dy}{dx}$ on the left-hand side:
-\begin{align*}
-	\frac{dy}{dx} \ln(\cos x) - x \cot y \frac{dy}{dx} &= \ln(\sin y) + y \tan x \\
-	\frac{dy}{dx} \left[\ln(\cos x) - x \cot y\right] &= \ln(\sin y) + y \tan x
-\end{align*}
+\item If $\brak{\cos x}^y = \brak{\sin y}^x$, find $\dfrac{dy}{dx}$.
+\hfill (12~2019)
 
+\solution
+Taking the natural logarithm on both sides using \eqref{eq:CBSE12-2019-log_diff}:
+\begin{align}
+	\ln\left(\brak{\cos x}^y\right) &= \ln\left(\brak{\sin y}^x\right) \\
+	y \ln\brak{\cos x} &= x \ln\brak{\sin y}
+\end{align}
+Differentiating both sides implicitly with respect to $x$ using \eqref{eq:CBSE12-2019-product_log_diff}:
+\begin{align}
+	\frac{dy}{dx}\ln\brak{\cos x} + y\cdot\frac{-\sin x}{\cos x} &= 1\cdot\ln\brak{\sin y} + x\cdot\frac{\cos y}{\sin y}\frac{dy}{dx} \\
+	\frac{dy}{dx}\ln\brak{\cos x} - y\tan x &= \ln\brak{\sin y} + x\cot y\frac{dy}{dx}
+\end{align}
+Grouping the derivative terms:
+\begin{align}
+	\frac{dy}{dx}\sbrak{\ln\brak{\cos x} - x\cot y} &= \ln\brak{\sin y} + y\tan x
+\end{align}
 Solving for $\dfrac{dy}{dx}$:
-\begin{align*}
-	\frac{dy}{dx} = \frac{\ln(\sin y) + y \tan x}{\ln(\cos x) - x \cot y}
-\end{align*}
-
-\item Prove that $\int_0^a f(x)\,dx=\int_0^a f(a-x)\,dx,$ and hence evaluate $\int_0^{\pi/2}\frac{x}{\sin x+\cos x}\,dx.$
-
-\solution
-When $x = 0$, $t = a$, and when $x = a$, $t = 0$.
-\begin{align*}
-	I_0 &= \int_a^0 f(a - t)(-dt) = -\int_a^0 f(a - t)\,dt = \int_0^a f(a - t)\,dt
-\end{align*}
-
-Changing the dummy variable from $t$ to $x$:
-\begin{align*}
-	\int_0^a f(x)\,dx = \int_0^a f(a - x)\,dx
-\end{align*}
-
-Evaluation of the integral:
-\begin{align*}
-	I = \int_0^{\pi/2} \frac{x}{\sin x + \cos x}\,dx
-\end{align*}
-
-Applying the property $\int_0^a f(x)\,dx = \int_0^a f(a - x)\,dx$:
-\begin{align*}
-	I &= \int_0^{\pi/2} \frac{\frac{\pi}{2} - x}{\sin\left(\frac{\pi}{2} - x\right) + \cos\left(\frac{\pi}{2} - x\right)}\,dx = \int_0^{\pi/2} \frac{\frac{\pi}{2} - x}{\cos x + \sin x}\,dx
-\end{align*}
-
-Adding the two expressions for $I$:
-\begin{align*}
-	2I &= \int_0^{\pi/2} \frac{x + \left(\frac{\pi}{2} - x\right)}{\sin x + \cos x}\,dx \implies
-	2I = \frac{\pi}{2} \int_0^{\pi/2} \frac{1}{\sin x + \cos x}\,dx \implies
-	I = \frac{\pi}{4} \int_0^{\pi/2} \frac{1}{\sin x + \cos x}\,dx
-\end{align*}
-
-Transforming the denominator:
-\begin{align*}
-	\sin x + \cos x = \sqrt{2}\left(\frac{1}{\sqrt{2}}\cos x + \frac{1}{\sqrt{2}}\sin x\right) = \sqrt{2}\cos\left(x - \frac{\pi}{4}\right)
-\end{align*}
-
-Substituting back:
-\begin{align*}
-	I &= \frac{\pi}{4\sqrt{2}} \int_0^{\pi/2} \sec\left(x - \frac{\pi}{4}\right)\,dx
-\end{align*}
-
-Substitute $u = x - \frac{\pi}{4} \implies du = dx$. When $x = 0$, $u = -\frac{\pi}{4}$; when $x = \frac{\pi}{2}$, $u = \frac{\pi}{4}$:
-\begin{align*}
-	I &= \frac{\pi}{4\sqrt{2}} \int_{-\pi/4}^{\pi/4} \sec u\,du 
-	= \frac{\pi}{4\sqrt{2}} \cdot 2 \int_0^{\pi/4} \sec u\,du 
-	= \frac{\pi}{2\sqrt{2}} \ln(\sqrt{2} + 1)
-\end{align*}
+\begin{align}
+	\frac{dy}{dx} = \frac{\ln\brak{\sin y} + y\tan x}{\ln\brak{\cos x} - x\cot y}
+\end{align}
 
 
 
-\item Find:
-\[
-\int \frac{x^2+x+1}{(x+2)(x^2+1)}\,dx.
-\]
+\item Prove that $\displaystyle\int_0^a f(x)\,dx = \int_0^a f(a-x)\,dx$, and hence evaluate $\displaystyle\int_0^{\pi/2}\frac{x}{\sin x+\cos x}\,dx$.
+\hfill (12~2019)
 
 \solution
-\begin{align*}
-	\frac{x^2+x+1}{(x+2)(x^2+1)} = \frac{A}{x+2} + \frac{Bx+C}{x^2+1}
-\end{align*}
-
-Expanding and collecting coefficients of like powers of $x$:
-\begin{align*}
-	x^2+x+1 &= A(x^2+1) + B(x^2+2x) + C(x+2) \implies
-	x^2+x+1 = (A+B)x^2 + (2B+C)x + (A+2C)
-\end{align*}
-
-Substituting $A$, $B$, and $C$ back into the partial fraction decomposition:
-\begin{align*}
-	\frac{x^2+x+1}{(x+2)(x^2+1)} &= \frac{3/5}{x+2} + \frac{\frac{2}{5}x + \frac{1}{5}}{x^2+1} = \frac{3}{5}\left(\frac{1}{x+2}\right) + \frac{1}{5}\left(\frac{2x}{x^2+1}\right) + \frac{1}{5}\left(\frac{1}{x^2+1}\right)
-\end{align*}
-
-Integrating term-by-term:
-\begin{align*}
-	I &= \frac{3}{5}\int \frac{1}{x+2}\,dx + \frac{1}{5}\int \frac{2x}{x^2+1}\,dx + \frac{1}{5}\int \frac{1}{x^2+1}\,dx
-\end{align*}
-
-Using standard integration identities:
-\begin{align*}
-	\int \frac{1}{x+2}\,dx &= \ln|x+2| \implies
-	\int \frac{2x}{x^2+1}\,dx = \ln(x^2+1) \quad (\text{since } x^2+1 > 0) \implies
-	\int \frac{1}{x^2+1}\,dx = \tan^{-1}x
-\end{align*}
-
-Combining the evaluated terms:
-\begin{align*}
-	I = \frac{3}{5}\ln|x+2| + \frac{1}{5}\ln(x^2+1) + \frac{1}{5}\tan^{-1}x + C
-\end{align*}
+To prove King's property \eqref{eq:CBSE12-2019-kings_property}, let $t = a - x \implies dx = -dt$. When $x = 0$, $t = a$; when $x = a$, $t = 0$:
+\begin{align}
+	\int_0^a f(x)\,dx = \int_a^0 f(a - t)\brak{-dt} = \int_0^a f(a - t)\,dt = \int_0^a f(a - x)\,dx
+\end{align}
+Now, evaluating the given definite integral:
+\begin{align}
+	I = \int_0^{\pi/2} \frac{x}{\sin x + \cos x}\,dx \label{eq:EE26BTECH11223-12-q23-integral}
+\end{align}
+Applying property \eqref{eq:CBSE12-2019-kings_property}:
+\begin{align}
+	I &= \int_0^{\pi/2} \frac{\frac{\pi}{2} - x}{\sin\left(\frac{\pi}{2} - x\right) + \cos\left(\frac{\pi}{2} - x\right)}\,dx \\
+	&= \int_0^{\pi/2} \frac{\frac{\pi}{2} - x}{\cos x + \sin x}\,dx \label{eq:EE26BTECH11223-10-q23-king}
+\end{align}
+Adding \eqref{eq:EE26BTECH11223-12-q23-integral} and \eqref{eq:EE26BTECH11223-10-q23-king}:
+\begin{align}
+	2I &= \int_0^{\pi/2} \frac{x + \frac{\pi}{2} - x}{\sin x + \cos x}\,dx = \frac{\pi}{2} \int_0^{\pi/2} \frac{1}{\sin x + \cos x}\,dx \\
+	I &= \frac{\pi}{4} \int_0^{\pi/2} \frac{1}{\sqrt{2}\cos\left(x - \frac{\pi}{4}\right)}\,dx = \frac{\pi}{4\sqrt{2}} \int_0^{\pi/2} \sec\left(x - \frac{\pi}{4}\right)\,dx
+\end{align}
+Substituting $u = x - \frac{\pi}{4}$:
+\begin{align}
+	I &= \frac{\pi}{4\sqrt{2}} \int_{-\pi/4}^{\pi/4} \sec u\,du = \frac{\pi}{4\sqrt{2}} \cdot 2\ln\left|\sec\frac{\pi}{4} + \tan\frac{\pi}{4}\right| \\
+	&= \frac{\pi}{2\sqrt{2}}\ln\left(\sqrt{2} + 1\right)
+\end{align}
 
 
-\item Solve the differential equation
-\[
-x\frac{dy}{dx}=y-x\tan\left(\frac{y}{x}\right).
-\]
+\item Find $\displaystyle\int \frac{x^2+x+1}{\brak{x+2}\brak{x^2+1}}\,dx$.
+\hfill (12~2019)
 
 \solution
-Dividing both sides by $x$ (for $x \ne 0$):
-\begin{align*}
+Using partial fraction decomposition from \eqref{eq:CBSE12-2019-partial_fractions}:
+\begin{align}
+	\frac{x^2 + x + 1}{\brak{x + 2}\brak{x^2 + 1}} = \frac{A}{x + 2} + \frac{Bx + C}{x^2 + 1}
+\end{align}
+Multiplying by $\brak{x + 2}\brak{x^2 + 1}$:
+\begin{align}
+	x^2 + x + 1 &= A\brak{x^2 + 1} + \brak{Bx + C}\brak{x + 2} \\
+	&= \brak{A + B}x^2 + \brak{2B + C}x + \brak{A + 2C}
+\end{align}
+Comparing coefficients of like powers of $x$:
+\begin{align}
+	A + B &= 1 \\
+	2B + C &= 1 \\
+	A + 2C &= 1
+\end{align}
+Solving this linear system yields $A = \frac{3}{5}$, $B = \frac{2}{5}$, and $C = \frac{1}{5}$. Thus:
+\begin{align}
+	\frac{x^2 + x + 1}{\brak{x + 2}\brak{x^2 + 1}} = \frac{3}{5}\brak{\frac{1}{x + 2}} + \frac{1}{5}\brak{\frac{2x}{x^2 + 1}} + \frac{1}{5}\brak{\frac{1}{x^2 + 1}}
+\end{align}
+Integrating term-by-term using \eqref{eq:CBSE12-2019-int_linear_denom}--\eqref{eq:CBSE12-2019-int_arctan}:
+\begin{align}
+	I &= \frac{3}{5}\int \frac{1}{x + 2}\,dx + \frac{1}{5}\int \frac{2x}{x^2 + 1}\,dx + \frac{1}{5}\int \frac{1}{x^2 + 1}\,dx \\
+	&= \frac{3}{5}\ln\abs{x + 2} + \frac{1}{5}\ln\brak{x^2 + 1} + \frac{1}{5}\tan^{-1}x + C
+\end{align}
+
+
+\item Solve the differential equation $x\dfrac{dy}{dx} = y - x\tan\left(\frac{y}{x}\right)$.
+\hfill (12~2019)
+
+\solution
+Rewriting in the homogeneous form \eqref{eq:CBSE12-2019-homogeneous_ode}:
+\begin{align}
 	\frac{dy}{dx} = \frac{y}{x} - \tan\left(\frac{y}{x}\right)
-\end{align*}
-
-Substituting $y = vx$ and $\dfrac{dy}{dx} = v + x\dfrac{dv}{dx}$ into the differential equation:
-\begin{align*}
-	v + x\frac{dv}{dx} &= v - \tan v \implies
-	x\frac{dv}{dx} = -\tan v
-\end{align*}
-
-Rearranging the variables $v$ and $x$:
-\begin{align*}
-	\frac{dv}{\tan v} &= -\frac{dx}{x} \implies
-	\cot v\,dv = -\frac{dx}{x}
-\end{align*}
-
+\end{align}
+Substituting $y = vx$ and $\dfrac{dy}{dx} = v + x\dfrac{dv}{dx}$ in accordance with \eqref{eq:CBSE12-2019-homog_separable}:
+\begin{align}
+	v + x\frac{dv}{dx} = v - \tan v \implies x\frac{dv}{dx} = -\tan v
+\end{align}
+Separating variables:
+\begin{align}
+	\frac{dv}{\tan v} = -\frac{dx}{x} \implies \cot v\,dv = -\frac{dx}{x}
+\end{align}
 Integrating both sides:
-\begin{align*}
-	\int \cot v\,dv &= -\int \frac{1}{x}\,dx \\
-	\ln|\sin v| &= -\ln|x| + \ln C_1
-\end{align*}
-where $\ln C_1$ is an arbitrary constant ($C_1 > 0$).
-
-Using logarithmic properties:
-\begin{align*}
-	\ln|\sin v| + \ln|x| &= \ln C_1 \implies
-	x \sin v = C
-\end{align*}
-where $C = \pm C_1$ is an arbitrary real non-zero constant.
-
-Substituting $v = \dfrac{y}{x}$ back into the solution:
-\begin{align*}
+\begin{align}
+	\ln\abs{\sin v} = -\ln\abs{x} + \ln C_1 \implies \ln\abs{x\sin v} = \ln C_1 \implies x\sin v = C
+\end{align}
+Substituting back $v = \frac{y}{x}$:
+\begin{align}
 	x\sin\left(\frac{y}{x}\right) = C
-\end{align*}
-
-
-\item Solve the differential equation
-\[
-\frac{dy}{dx}=-\frac{x+y\cos x}{1+\sin x}.
-\]
-
-\solution
-\begin{align*}
-	\frac{dy}{dx} &= -\frac{x}{1 + \sin x} - \frac{y\cos x}{1 + \sin x} \\
-	\frac{dy}{dx} + \left(\frac{\cos x}{1 + \sin x}\right)y &= -\frac{x}{1 + \sin x}
-\end{align*}
-
-This is a linear first-order differential equation of the standard form:
-\begin{align*}
-	\frac{dy}{dx} + P(x)y = Q(x)
-\end{align*}
-where:
-\begin{align*}
-	P(x) = \frac{\cos x}{1 + \sin x}, \qquad Q(x) = -\frac{x}{1 + \sin x}
-\end{align*}
-
-Integrating factor:
-\begin{align*}
-	\text{I.F.} = e^{\int P(x)\,dx} = e^{\int \frac{\cos x}{1 + \sin x}\,dx}
-\end{align*}
-
-Let $u = 1 + \sin x \implies du = \cos x\,dx$:
-\begin{align*}
-	\int \frac{\cos x}{1 + \sin x}\,dx = \ln|1 + \sin x|
-\end{align*}
-
-Since $1 + \sin x \ge 0$ for all real $x$:
-\begin{align*}
-	\text{I.F.} = e^{\ln(1 + \sin x)} = 1 + \sin x
-\end{align*}
-
-General solution:
-The general solution of a linear differential equation is given by:
-\begin{align*}
-	y \cdot (\text{I.F.}) = \int Q(x) \cdot (\text{I.F.})\,dx + C
-\end{align*}
-
-Substituting the values of $\text{I.F.}$ and $Q(x)$:
-\begin{align*}
-	y(1 + \sin x) &= \int \left(-\frac{x}{1 + \sin x}\right)(1 + \sin x)\,dx + C \implies
-	y(1 + \sin x) = \int (-x)\,dx + C \implies
-	y(1 + \sin x) = -\frac{x^2}{2} + C
-\end{align*}
-
-Multiplying throughout by $2$:
-\begin{align*}
-	2y(1 + \sin x) = -x^2 + 2C \implies 2y(1 + \sin x) + x^2 = C'
-\end{align*}
+\end{align}
 
 
 
-
-\item The scalar product of the vector $\vec a=\vec i+\vec j+\vec k$
-with a unit vector along the sum of the vectors $\vec b=2\vec i+4\vec j-5\vec k,\vec c=\lambda\hat i+2\vec j+3\vec k$
-is equal to 1. Find the value of $\lambda$ and hence find the unit vector along $\vec b+\vec c$.
+\item Solve the differential equation $\dfrac{dy}{dx} = -\dfrac{x + y\cos x}{1 + \sin x}$.
+\hfill (12~2019)
 
 \solution
-\begin{align*}
-	\vec{b} + \vec{c} &= (2\vec{i} + 4\vec{j} - 5\vec{k}) + (\lambda\vec{i} + 2\vec{j} + 3\vec{k}) \\
-	&= (2 + \lambda)\vec{i} + (4 + 2)\vec{j} + (-5 + 3)\vec{k} \\
-	&= (\lambda + 2)\vec{i} + 6\vec{j} - 2\vec{k} \\
-	|\vec{b} + \vec{c}| &= \sqrt{(\lambda + 2)^2 + 6^2 + (-2)^2} \\
-	&= \sqrt{(\lambda + 2)^2 + 36 + 4} \\
-	&= \sqrt{(\lambda + 2)^2 + 40}
-\end{align*}
-
-Unit vector along the sum:
-Let $\vec{u}$ denote the unit vector in the direction of $\vec{b} + \vec{c}$:
-\begin{align*}
-	\vec{u} = \frac{\vec{b} + \vec{c}}{|\vec{b} + \vec{c}|} = \frac{(\lambda + 2)\vec{i} + 6\vec{j} - 2\vec{k}}{\sqrt{(\lambda + 2)^2 + 40}}
-\end{align*}
-
-Scalar product condition:
-The scalar product of $\vec{a}$ with the unit vector $\vec{u}$ is given to be $1$:
-\begin{align*}
-	\vec{a} \cdot \vec{u} = 1 \implies \vec{a} \cdot \frac{\vec{b} + \vec{c}}{|\vec{b} + \vec{c}|} = 1
-\end{align*}
-
-Evaluating the dot product in the numerator:
-\begin{align*}
-	\vec{a} \cdot (\vec{b} + \vec{c}) &= (\vec{i} + \vec{j} + \vec{k}) \cdot \left[ (\lambda + 2)\vec{i} + 6\vec{j} - 2\vec{k} \right] = \lambda + 6
-\end{align*}
-
-Substituting into the equation:
-\begin{align*}
-	\frac{\lambda + 6}{\sqrt{(\lambda + 2)^2 + 40}} = 1 \implies \lambda + 6 = \sqrt{(\lambda + 2)^2 + 40}
-\end{align*}
-
-Squaring both sides (with $\lambda + 6 > 0$):
-\begin{align*}
-	(\lambda + 6)^2 &= (\lambda + 2)^2 + 40 \\
-	\lambda^2 + 12\lambda + 36 &= (\lambda^2 + 4\lambda + 4) + 40 \\
-	8\lambda &= 8 \implies
-	\lambda = 1
-\end{align*}
-
-Substitute $\lambda = 1$ back into $\vec{b} + \vec{c}$:
-\begin{align*}
-	\vec{b} + \vec{c} &= (1 + 2)\vec{i} + 6\vec{j} - 2\vec{k} = 3\vec{i} + 6\vec{j} - 2\vec{k}\\
-	|\vec{b} + \vec{c}| &= \sqrt{3^2 + 6^2 + (-2)^2} = \sqrt{9 + 36 + 4} = \sqrt{49} = 7
-\end{align*}
-
-Therefore, the unit vector along $\vec{b} + \vec{c}$ is:
-\begin{align*}
-	\vec{u} = \frac{3\vec{i} + 6\vec{j} - 2\vec{k}}{7} = \frac{3}{7}\vec{i} + \frac{6}{7}\vec{j} - \frac{2}{7}\vec{k}
-\end{align*}
+Rearranging into the standard linear differential form \eqref{eq:CBSE12-2019-linear_ode}:
+\begin{align}
+	\frac{dy}{dx} + \left(\frac{\cos x}{1 + \sin x}\right)y = -\frac{x}{1 + \sin x}
+\end{align}
+Here $P(x) = \frac{\cos x}{1 + \sin x}$ and $Q(x) = -\frac{x}{1 + \sin x}$.
+Finding the integrating factor via \eqref{eq:CBSE12-2019-linear_ode_sol}:
+\begin{align}
+	\text{I.F.} = e^{\int \frac{\cos x}{1 + \sin x}\,dx} = e^{\ln\brak{1 + \sin x}} = 1 + \sin x
+\end{align}
+Multiplying through and integrating:
+\begin{align}
+	y\brak{1 + \sin x} &= \int \left(-\frac{x}{1 + \sin x}\right)\brak{1 + \sin x}\,dx + C \\
+	&= \int (-x)\,dx + C = -\frac{x^2}{2} + C
+\end{align}
+Multiplying by $2$:
+\begin{align}
+	2y\brak{1 + \sin x} + x^2 = C'
+\end{align}
 
 
 
-\item If $(a+bx)e^{y/x}=x$,then prove that $x^3\frac{d^2y}{dx^2}=\left(x\frac{dy}{dx}-y\right)^2$.
+\item The scalar product of the vector $\vec{a} = \vec{i} + \vec{j} + \vec{k}$ with a unit vector along the sum of the vectors $\vec{b} = 2\vec{i} + 4\vec{j} - 5\vec{k}$ and $\vec{c} = \lambda\vec{i} + 2\vec{j} + 3\vec{k}$ is equal to $1$. Find the value of $\lambda$ and hence find the unit vector along $\vec{b} + \vec{c}$.
+\hfill (12~2019)
+
+\solution
+Summing vectors $\vec{b}$ and $\vec{c}$:
+\begin{align}
+	\vec{b} + \vec{c} = \myvec{2 + \lambda \\ 6 \\ -2}
+\end{align}
+The unit vector $\vec{u}$ along $\vec{b} + \vec{c}$ is given by \eqref{eq:CBSE12-2019-unit_vector}:
+\begin{align}
+	\vec{u} = \frac{\vec{b} + \vec{c}}{\norm{\vec{b} + \vec{c}}} = \frac{\myvec{\lambda + 2 \\ 6 \\ -2}}{\sqrt{\brak{\lambda + 2}^2 + 36 + 4}} = \frac{\myvec{\lambda + 2 \\ 6 \\ -2}}{\sqrt{\brak{\lambda + 2}^2 + 40}}
+\end{align}
+Given that $\vec{a} \cdot \vec{u} = 1$:
+\begin{align}
+	\myvec{1 & 1 & 1} \cdot \frac{\myvec{\lambda + 2 \\ 6 \\ -2}}{\sqrt{\brak{\lambda + 2}^2 + 40}} = 1 \implies \frac{\brak{\lambda + 2} + 6 - 2}{\sqrt{\brak{\lambda + 2}^2 + 40}} = 1 \implies \frac{\lambda + 6}{\sqrt{\brak{\lambda + 2}^2 + 40}} = 1
+\end{align}
+Squaring both sides ($\lambda + 6 > 0$):
+\begin{align}
+	\brak{\lambda + 6}^2 = \brak{\lambda + 2}^2 + 40 \implies \lambda^2 + 12\lambda + 36 = \lambda^2 + 4\lambda + 4 + 40 \implies 8\lambda = 8 \implies \lambda = 1
+\end{align}
+Substituting $\lambda = 1$:
+\begin{align}
+	\vec{b} + \vec{c} = \myvec{3 \\ 6 \\ -2}, \quad \norm{\vec{b} + \vec{c}} = \sqrt{9 + 36 + 4} = \sqrt{49} = 7
+\end{align}
+Thus, the unit vector along $\vec{b} + \vec{c}$ is:
+\begin{align}
+	\vec{u} = \frac{1}{7}\myvec{3 \\ 6 \\ -2} = \frac{3}{7}\vec{i} + \frac{6}{7}\vec{j} - \frac{2}{7}\vec{k}
+\end{align}
+
+
+\item If $\brak{a + bx}e^{y/x} = x$, then prove that $x^3\dfrac{d^2y}{dx^2} = \left(x\dfrac{dy}{dx} - y\right)^2$.
+\hfill (12~2019)
 
 \solution
 Taking the natural logarithm on both sides:
-\begin{align*}
-	\ln\left((a+bx)e^{y/x}\right) &= \ln x \\
-	\ln(a+bx) + \ln\left(e^{y/x}\right) &= \ln x \\
-	\ln(a+bx) + \frac{y}{x} &= \ln x \\
-	\frac{y}{x} &= \ln x - \ln(a+bx)
-\end{align*}
-
-Differentiating both sides with respect to $x$:
-\begin{align*}
-	\frac{d}{dx}\left(\frac{y}{x}\right) &= \frac{d}{dx}\left[\ln x - \ln(a+bx)\right]
-\end{align*}
-
-Using the quotient rule on the left-hand side and standard logarithmic differentiation on the right-hand side:
-\begin{align*}
-	\frac{x\frac{dy}{dx} - y(1)}{x^2} &= \frac{1}{x} - \frac{b}{a+bx} \\
-	\frac{x\frac{dy}{dx} - y}{x^2} &= \frac{(a+bx) - bx}{x(a+bx)} \\
-	\frac{x\frac{dy}{dx} - y}{x^2} &= \frac{a}{x(a+bx)}
-\end{align*}
-
+\begin{align}
+	\ln\brak{a + bx} + \frac{y}{x} = \ln x \implies \frac{y}{x} = \ln x - \ln\brak{a + bx}
+\end{align}
+Differentiating with respect to $x$:
+\begin{align}
+	\frac{x\frac{dy}{dx} - y}{x^2} = \frac{1}{x} - \frac{b}{a + bx} = \frac{a + bx - bx}{x\brak{a + bx}} = \frac{a}{x\brak{a + bx}}
+\end{align}
+Multiplying by $x^2$:
+\begin{align}
+	x\frac{dy}{dx} - y = \frac{ax}{a + bx} \label{eq:EE26BTECH11223-12-q28-rel1}
+\end{align}
+Differentiating \eqref{eq:EE26BTECH11223-12-q28-rel1} with respect to $x$:
+\begin{align}
+	\frac{dy}{dx} + x\frac{d^2y}{dx^2} - \frac{dy}{dx} &= \frac{\brak{a + bx}\brak{a} - \brak{ax}\brak{b}}{\brak{a + bx}^2} \\
+	x\frac{d^2y}{dx^2} &= \frac{a^2}{\brak{a + bx}^2}
+\end{align}
 Multiplying both sides by $x^2$:
 \begin{align}
-	x\frac{dy}{dx} - y = \frac{ax}{a+bx} \label{eq:first_order_rel}
+	x^3\frac{d^2y}{dx^2} = \frac{a^2 x^2}{\brak{a + bx}^2} = \left(\frac{ax}{a + bx}\right)^2
 \end{align}
-
-Differentiating both sides of equation \eqref{eq:first_order_rel} with respect to $x$:
-\begin{align*}
-	\frac{d}{dx}\left(x\frac{dy}{dx} - y\right) &= \frac{d}{dx}\left(\frac{ax}{a+bx}\right) \\
-	\left(1 \cdot \frac{dy}{dx} + x\frac{d^2y}{dx^2}\right) - \frac{dy}{dx} &= \frac{(a+bx)\frac{d}{dx}(ax) - (ax)\frac{d}{dx}(a+bx)}{(a+bx)^2} \\
-	x\frac{d^2y}{dx^2} &= \frac{a^2 + abx - abx}{(a+bx)^2} \\
-	x\frac{d^2y}{dx^2} &= \frac{a^2}{(a+bx)^2}\\
-	x^3\frac{d^2y}{dx^2} &= \frac{a^2 x^2}{(a+bx)^2} \\
-	x^3\frac{d^2y}{dx^2} &= \left(\frac{ax}{a+bx}\right)^2
-\end{align*}
-
-Substituting $\dfrac{ax}{a+bx} = x\dfrac{dy}{dx} - y$ from equation \eqref{eq:first_order_rel}:
-\begin{align*}
-	x^3\frac{d^2y}{dx^2} = \left(x\frac{dy}{dx} - y\right)^2
-\end{align*}
-
-\item The volume of a cube is increasing at the rate of $8\text{ cm}^3/\text{s}$. How fast is the surface area increasing when the length of its edge is $12$ cm?
-
-\solution
-Let the edge length of the cube at any time $t$ be $x$ cm.
-
-Volume of the cube: $V = x^3$
-
-
-Surface area of the cube: $S = 6x^2$
-
-Differentiating $V$ with respect to time $t$:
-\begin{align*}
-	\frac{dV}{dt} = \frac{d}{dt}(x^3) = 3x^2 \frac{dx}{dt}
-\end{align*}
-
-Given that $\dfrac{dV}{dt} = 8\text{ cm}^3/\text{s}$:
-\begin{align*}
-	8 &= 3x^2 \frac{dx}{dt} \implies
-	\frac{dx}{dt} = \frac{8}{3x^2}
-\end{align*}
-
-Differentiating $S$ with respect to time $t$:
-\begin{align*}
-	\frac{dS}{dt} = \frac{d}{dt}(6x^2) = 12x \frac{dx}{dt}
-\end{align*}
-
-Substituting the expression for $\dfrac{dx}{dt}$:
-\begin{align*}
-	\frac{dS}{dt} &= 12x \left(\frac{8}{3x^2}\right) 
-	= \frac{96x}{3x^2} 
-	= \frac{32}{x}
-\end{align*}
-
-Evaluating at $x = 12\text{ cm}$:
-\begin{align*}
-	\left.\frac{dS}{dt}\right|_{x=12} &= \frac{32}{12} = \frac{8}{3}\text{ cm}^2/\text{s}
-\end{align*}
-
-\item Find the Cartesian and vector equations of the plane passing through the points $A(2,5,-3),\quad B(-2,-3,5),\quad C(5,3,-3)$.
-
-\solution
-Using the three-point determinant form:
-\begin{align*}
-	\begin{vmatrix}
-		x - x_1 & y - y_1 & z - z_1 \\
-		x_2 - x_1 & y_2 - y_1 & z_2 - z_1 \\
-		x_3 - x_1 & y_3 - y_1 & z_3 - z_1
-	\end{vmatrix} = 0
-\end{align*}
-\begin{align*}
-	\begin{vmatrix}
-		x - 2 & y - 5 & z + 3 \\
-		-4 & -8 & 8 \\
-		3 & -2 & 0
-	\end{vmatrix} = 0
-\end{align*}
-
-Expanding along the first row:
-\begin{align*}
-	(x - 2)(16) - (y - 5)(-24) + (z + 3)(32) &= 0 \\
-	16(x - 2) + 24(y - 5) + 32(z + 3) &= 0
-\end{align*}
-
-Dividing the entire equation by $8$:
-\begin{align*}
-	2(x - 2) + 3(y - 5) + 4(z + 3) &= 0 \\
-	2x - 4 + 3y - 15 + 4z + 12 &= 0 \\
-	2x + 3y + 4z - 7 &= 0 \implies 2x + 3y + 4z = 7
-\end{align*}
-
-Cartesian equation: $2x + 3y + 4z = 7$
-Vector equation: $\vec{r} \cdot (2\vec{i} + 3\vec{j} + 4\vec{k}) = 7$
-
-\item Find the point on the curve $y^2=4x$, which is nearest to the point $(2,-8)$.
-
-\solution
-
-Thus, the coordinates of $P$ can be represented in terms of $y$ as:
-\begin{align*}
-	P\left(\frac{y^2}{4}, y\right)
-\end{align*}
-
-Let the given fixed point be $A(2, -8)$.
-
-The Euclidean distance $D$ between $P\left(\frac{y^2}{4}, y\right)$ and $A(2, -8)$ is:
-\begin{align*}
-	D = \sqrt{\left(\frac{y^2}{4} - 2\right)^2 + (y - (-8))^2} = \sqrt{\left(\frac{y^2}{4} - 2\right)^2 + (y + 8)^2}
-\end{align*}
-
-Minimizing $D$ is equivalent to minimizing the squared distance functional $Z = D^2$:
-\begin{align*}
-	Z = \left(\frac{y^2}{4} - 2\right)^2 + (y + 8)^2
-\end{align*}
-
-Differentiating $Z$ with respect to $y$:
-\begin{align*}
-	\frac{dZ}{dy} &= 2\left(\frac{y^2}{4} - 2\right)\frac{d}{dy}\left(\frac{y^2}{4} - 2\right) + 2(y + 8)\frac{d}{dy}(y + 8) \\
-	&= 2\left(\frac{y^2}{4} - 2\right)\left(\frac{2y}{4}\right) + 2(y + 8)(1) = y\left(\frac{y^2}{4} - 2\right) + 2y + 16 \\
-	&= \frac{y^3}{4} - 2y + 2y + 16 = \frac{y^3}{4} + 16
-\end{align*}
-
-Setting $\dfrac{dZ}{dy} = 0$ for stationary points:
-\begin{align*}
-	\frac{y^3}{4} + 16 &= 0 \implies
-	\frac{y^3}{4} = -16 \implies
-	y = -4
-\end{align*}
-
-Second derivative test:
-Differentiating $\dfrac{dZ}{dy}$ with respect to $y$:
-\begin{align*}
-	\frac{d^2Z}{dy^2} = \frac{d}{dy}\left(\frac{y^3}{4} + 16\right) = \frac{3y^2}{4}
-\end{align*}
-
-Evaluating at the critical point $y = -4$:
-\begin{align*}
-	\left.\frac{d^2Z}{dy^2}\right|_{y=-4} = \frac{3(-4)^2}{4} = \frac{3(16)}{4} = 12 > 0
-\end{align*}
-
-Since $\dfrac{d^2Z}{dy^2} > 0$, $Z$ attains a local and global minimum at $y = -4$.
-
-Substituting $y = -4$ into the relation $x = \dfrac{y^2}{4}$:
-\begin{align*}
-	x = \frac{(-4)^2}{4} = \frac{16}{4} = 4
-\end{align*}
-
-Therefore, the point on the curve nearest to $(2, -8)$ is $(4, -4)$.
-
-\item Find $_1^3 (x^2+2+e^{2x})\,dx$ as the limit of sums.
-
-\solution
-By definition, the definite integral as the limit of sums is given by:
-\begin{align*}
-	\int_a^b f(x)\,dx = \lim_{h \to 0} h \sum_{r=1}^n f(a + rh)
-\end{align*}
-where $h = \dfrac{b - a}{n} \implies nh = b - a$.
-
-Here[cite: 1]:
-\begin{align*}
-	a = 1, \qquad b = 3 \implies nh = 3 - 1 = 2
-\end{align*}
-and the integrand is:
-\begin{align*}
-	f(x) = x^2 + 2 + e^{2x}
-\end{align*}
-
-Evaluating $f(a + rh)$:
-\begin{align*}
-	f(1 + rh) &= (1 + rh)^2 + 2 + e^{2(1 + rh)} 
-	= 3 + 2rh + r^2h^2 + e^2(e^{2h})^r
-\end{align*}
-
-Setting up the Riemann sum:
-\begin{align*}
-	S_n = \sum_{r=1}^n f(1 + rh) &= \sum_{r=1}^n 3 + 2h\sum_{r=1}^n r + h^2\sum_{r=1}^n r^2 + e^2\sum_{r=1}^n (e^{2h})^r
-\end{align*}
-
-Using standard summation formulas:
-\begin{align*}
-	\sum_{r=1}^n 3 &= 3n &
-	\sum_{r=1}^n r &= \frac{n(n + 1)}{2} &
-	\sum_{r=1}^n r^2 &= \frac{n(n + 1)(2n + 1)}{6}
-\end{align*}
-
-For the geometric progression with first term $e^{2h}$ and common ratio $e^{2h}$:
-\begin{align*}
-	\sum_{r=1}^n (e^{2h})^r &= e^{2h} \left[\frac{(e^{2h})^n - 1}{e^{2h} - 1}\right] = e^{2h} \left[\frac{e^{2nh} - 1}{e^{2h} - 1}\right]
-\end{align*}
-
-Multiplying the sum by $h$:
-\begin{align*}
-	h S_n &= 3nh + 2h^2\left[\frac{n(n+1)}{2}\right] + h^3\left[\frac{n(n+1)(2n+1)}{6}\right] + h e^2 \cdot e^{2h}\left[\frac{e^{2nh} - 1}{e^{2h} - 1}\right] \\
-	&= 3(nh) + (nh)(nh + h) + \frac{(nh)(nh + h)(2nh + h)}{6} + e^2(e^{2nh} - 1) \cdot e^{2h} \left(\frac{h}{e^{2h} - 1}\right)
-\end{align*}
-
-Substituting $nh = 2$:
-\begin{align*}
-	h S_n &= 3(2) + 2(2 + h) + \frac{2(2 + h)(4 + h)}{6} + e^2(e^4 - 1) \cdot e^{2h} \left(\frac{h}{e^{2h} - 1}\right) \\
-	&= 6 + 2(2 + h) + \frac{(2 + h)(4 + h)}{3} + (e^6 - e^2) \cdot e^{2h} \left(\frac{1}{2} \cdot \frac{2h}{e^{2h} - 1}\right)
-\end{align*}
-
-Taking the limit as $n \to \infty$ ($h \to 0$):
-
-Using the standard limit $\displaystyle\lim_{t \to 0} \frac{e^t - 1}{t} = 1 \implies \lim_{h \to 0} \frac{2h}{e^{2h} - 1} = 1$:
-\begin{align*}
-	\int_1^3 (x^2 + 2 + e^{2x})\,dx &= \lim_{h \to 0} (h S_n) \\
-	&= 6 + 2(2 + 0) + \frac{(2 + 0)(4 + 0)}{3} + (e^6 - e^2) \cdot e^0 \left(\frac{1}{2} \cdot 1\right) \\
-	&= 6 + 4 + \frac{8}{3} + \frac{e^6 - e^2}{2} 
-	= \frac{38}{3} + \frac{e^6 - e^2}{2}
-\end{align*}
-
-Therefore:
-\begin{align*}
-	\int_1^3 (x^2+2+e^{2x})\,dx = \frac{38}{3} + \frac{e^6 - e^2}{2}
-\end{align*}
-
-
-\item Using integration, find the area of the triangular region whose sides have the equations $y=2x+1,\qquad y=3x+1,\qquad x=4$.
-
-\solution
+Substituting \eqref{eq:EE26BTECH11223-12-q28-rel1}:
 \begin{align}
-	y &= 2x + 1 \label{eq:line1} \\
-	y &= 3x + 1 \label{eq:line2} \\
-	x &= 4 \label{eq:line3}
+	x^3\frac{d^2y}{dx^2} = \left(x\frac{dy}{dx} - y\right)^2
 \end{align}
+The following code verifies the differential identity:
+\begin{lstlisting}[frame=single, basicstyle=\ttfamily\small]
+	codes/12/q28.py
+\end{lstlisting}
 
-Intersection of lines \eqref{eq:line1} and \eqref{eq:line2}:
-\begin{align*}
-	2x + 1 = 3x + 1 \implies x = 0
-\end{align*}
-Substituting $x = 0$ into equation \eqref{eq:line1}:
-\begin{align*}
-	y = 2(0) + 1 = 1
-\end{align*}
-Thus, the vertex is $A(0, 1)$.
-
-Intersection of lines \eqref{eq:line1} and \eqref{eq:line3}:
-Substituting $x = 4$ into equation \eqref{eq:line1}:
-\begin{align*}
-	y = 2(4) + 1 = 9
-\end{align*}
-Thus, the vertex is $B(4, 9)$.
-
-Intersection of lines \eqref{eq:line2} and \eqref{eq:line3}:
-Substituting $x = 4$ into equation \eqref{eq:line2}:
-\begin{align*}
-	y = 3(4) + 1 = 13
-\end{align*}
-Thus, the vertex is $C(4, 13)$.
-
-In the interval $x \in [0, 4]$, the line $y = 3x + 1$ lies above the line $y = 2x + 1$ since $3x + 1 \ge 2x + 1$ for all $x \ge 0$.
-
-The area $A$ of the region bounded between $x = 0$ and $x = 4$ is:
-\begin{align*}
-	\text{Area} &= \int_0^4 \left(y_{\text{upper}} - y_{\text{lower}}\right)\,dx 
-	= \int_0^4 \left[(3x + 1) - (2x + 1)\right]\,dx \\
-	&= \int_0^4 (3x + 1 - 2x - 1)\,dx 
-	= \int_0^4 x\,dx
-\end{align*}
-
-Evaluating the definite integral:
-\begin{align*}
-	\text{Area} &= \left[ \frac{x^2}{2} \right]_0^4 
-	= \frac{4^2}{2} - 0 
-	= \frac{16}{2} 
-	= 8\text{ square units}
-\end{align*}
-
-Therefore, the area of the triangular region is $8\text{ square units}$.
-
-\item If
- \[
-A=\begin{bmatrix}
-	1&3&4\\
-	2&1&2\\
-	5&1&1
-\end{bmatrix},
-\]
-find $A^{-1}$. Hence solve the system of equations
-\[
-\begin{aligned}
-	x+3y+4z&=8,\\
-	2x+y+2z&=5,\\
-	5x+y+z&=7.
-\end{aligned}
-\]
+\item The volume of a cube is increasing at the rate of $8\text{ cm}^3/\text{s}$. How fast is the surface area increasing when the length of its edge is $12\text{ cm}$?
+\hfill (12~2019)
 
 \solution
-Determinant of matrix A:
-Expanding $|A|$ along the first row:
-\begin{align*}
-	|A| &= 1 \begin{vmatrix} 1 & 2 \\ 1 & 1 \end{vmatrix} - 3 \begin{vmatrix} 2 & 2 \\ 5 & 1 \end{vmatrix} + 4 \begin{vmatrix} 2 & 1 \\ 5 & 1 \end{vmatrix} 
-	= 1(-1) - 3(-8) + 4(-3) 
-	= 11
-\end{align*}
+Let $x$ be the edge length of the cube. From \eqref{eq:CBSE12-2019-cube_rates}:
+\begin{align}
+	V = x^3 \implies \frac{dV}{dt} = 3x^2 \frac{dx}{dt}
+\end{align}
+Given $\dfrac{dV}{dt} = 8\text{ cm}^3/\text{s}$:
+\begin{align}
+	8 = 3x^2 \frac{dx}{dt} \implies \frac{dx}{dt} = \frac{8}{3x^2}
+\end{align}
+Surface area $S = 6x^2$. From \eqref{eq:CBSE12-2019-cube_rates}, the rate of change of surface area is:
+\begin{align}
+	\frac{dS}{dt} = 12x \frac{dx}{dt} = 12x \left(\frac{8}{3x^2}\right) = \frac{32}{x}
+\end{align}
+Evaluating at $x = 12\text{ cm}$:
+\begin{align}
+	\left.\frac{dS}{dt}\right|_{x=12} = \frac{32}{12} = \frac{8}{3}\text{ cm}^2/\text{s}
+\end{align}
 
-Let $C_{ij}$ denote the cofactor of entry $a_{ij}$:
-\begin{align*}
-	C_{11} &= + \begin{vmatrix} 1 & 2 \\ 1 & 1 \end{vmatrix} = 1 - 2 = -1 \\
-	C_{12} &= - \begin{vmatrix} 2 & 2 \\ 5 & 1 \end{vmatrix} = -(2 - 10) = 8 \\
-	C_{13} &= + \begin{vmatrix} 2 & 1 \\ 5 & 1 \end{vmatrix} = 2 - 5 = -3 \\
-	C_{21} &= - \begin{vmatrix} 3 & 4 \\ 1 & 1 \end{vmatrix} = -(3 - 4) = 1 \\
-	C_{22} &= + \begin{vmatrix} 1 & 4 \\ 5 & 1 \end{vmatrix} = 1 - 20 = -19 \\
-	C_{23} &= - \begin{vmatrix} 1 & 3 \\ 5 & 1 \end{vmatrix} = -(1 - 15) = 14 \\
-	C_{31} &= + \begin{vmatrix} 3 & 4 \\ 1 & 2 \end{vmatrix} = 6 - 4 = 2 \\
-	C_{32} &= - \begin{vmatrix} 1 & 4 \\ 2 & 2 \end{vmatrix} = -(2 - 8) = 6 \\
-	C_{33} &= + \begin{vmatrix} 1 & 3 \\ 2 & 1 \end{vmatrix} = 1 - 6 = -5
-\end{align*}
 
-Adjugate and inverse:
-The matrix of cofactors is:
-\begin{align*}
-	C = \begin{bmatrix}
-		-1 & 8 & -3 \\
-		1 & -19 & 14 \\
-		2 & 6 & -5
-	\end{bmatrix}
-\end{align*}
+\item Find the Cartesian and vector equations of the plane passing through the points $A(2,5,-3)$, $B(-2,-3,5)$, and $C(5,3,-3)$.
+\hfill (12~2019)
 
-The adjugate of $A$ is the transpose of the cofactor matrix:
-\begin{align*}
-	\operatorname{adj}(A) = C^T = \begin{bmatrix}
-		-1 & 1 & 2 \\
-		8 & -19 & 6 \\
-		-3 & 14 & -5
-	\end{bmatrix}
-\end{align*}
+\solution
+Let the position vectors of the points be
+\begin{align}
+	\vec{a} = \myvec{2 \\ 5 \\ -3}, \quad \vec{b} = \myvec{-2 \\ -3 \\ 5}, \quad \vec{c} = \myvec{5 \\ 3 \\ -3}
+\end{align}
+Evaluating displacement vectors lying in the plane:
+\begin{align}
+	\vec{AB} &= \vec{b} - \vec{a} = \myvec{-4 \\ -8 \\ 8} \\
+	\vec{AC} &= \vec{c} - \vec{a} = \myvec{3 \\ -2 \\ 0}
+\end{align}
+From \eqref{eq:CBSE12-2019-plane_vector_normal}, the normal vector $\vec{n}$ is obtained by cross product:
+\begin{align}
+	\vec{n} = \vec{AB} \times \vec{AC} = \mydet{\vec{i} & \vec{j} & \vec{k} \\ -4 & -8 & 8 \\ 3 & -2 & 0} = \vec{i}\brak{0 - \brak{-16}} - \vec{j}\brak{0 - 24} + \vec{k}\brak{8 - \brak{-24}} = 16\vec{i} + 24\vec{j} + 32\vec{k}
+\end{align}
+Scaling by $\frac{1}{8}$ yields the simplified normal vector:
+\begin{align}
+	\vec{n}_0 = \myvec{2 \\ 3 \\ 4}
+\end{align}
+From \eqref{eq:CBSE12-2019-plane_vector_normal}, evaluating $\vec{a} \cdot \vec{n}_0$:
+\begin{align}
+	\myvec{2 & 5 & -3}\myvec{2 \\ 3 \\ 4} = 4 + 15 - 12 = 7
+\end{align}
+Thus, the vector equation of the plane is:
+\begin{align}
+	\vec{r} \cdot \myvec{2 \\ 3 \\ 4} = 7
+\end{align}
+Substituting $\vec{r} = \myvec{x \\ y \\ z}$, the Cartesian equation is:
+\begin{align}
+	2x + 3y + 4z = 7
+\end{align}
+The following code verifies the plane equations:
+\begin{lstlisting}[frame=single, basicstyle=\ttfamily\small]
+	codes/12/q30.py
+\end{lstlisting}
 
-Thus, the inverse matrix $A^{-1}$ is:
-\begin{align*}
-	A^{-1} = \frac{1}{|A|}\operatorname{adj}(A) = \frac{1}{11}\begin{bmatrix}
-		-1 & 1 & 2 \\
-		8 & -19 & 6 \\
-		-3 & 14 & -5
-	\end{bmatrix}
-\end{align*}
+\item Find the point on the curve $y^2 = 4x$ which is nearest to the point $(2, -8)$.
+\hfill (12~2019)
 
-Solution of the linear system:
-The given system of linear equations is[cite: 1]:
-\begin{align*}
+\solution
+Let $P\brak{x, y}$ be a point on the parabola $y^2 = 4x$, so its coordinates can be expressed parametrically as $\myvec{y^2/4 \\ y}$.
+Let the fixed point be $\vec{A} = \myvec{2 \\ -8}$.
+The square of the Euclidean distance $Z$ between $P$ and $A$ from \eqref{eq:CBSE12-2019-extrema_first} is:
+\begin{align}
+	Z = \brak{\frac{y^2}{4} - 2}^2 + \brak{y - \brak{-8}}^2 = \brak{\frac{y^2}{4} - 2}^2 + \brak{y + 8}^2
+\end{align}
+Differentiating $Z$ with respect to $y$:
+\begin{align}
+	\frac{dZ}{dy} &= 2\brak{\frac{y^2}{4} - 2}\brak{\frac{2y}{4}} + 2\brak{y + 8} \\
+	&= \frac{y^3}{4} - 2y + 2y + 16 = \frac{y^3}{4} + 16
+\end{align}
+Setting $\frac{dZ}{dy} = 0$ for stationary points:
+\begin{align}
+	\frac{y^3}{4} + 16 = 0 \implies y^3 = -64 \implies y = -4
+\end{align}
+Applying the second derivative test \eqref{eq:CBSE12-2019-extrema_second}:
+\begin{align}
+	\frac{d^2Z}{dy^2} = \frac{3y^2}{4}
+\end{align}
+Evaluating at $y = -4$:
+\begin{align}
+	\left.\frac{d^2Z}{dy^2}\right|_{y=-4} = \frac{3\brak{-4}^2}{4} = \frac{3\brak{16}}{4} = 12 > 0
+\end{align}
+Since $\frac{d^2Z}{dy^2} > 0$, $Z$ attains its minimum at $y = -4$.
+Substituting $y = -4$ into $x = \frac{y^2}{4}$:
+\begin{align}
+	x = \frac{\brak{-4}^2}{4} = \frac{16}{4} = 4
+\end{align}
+Therefore, the point on the curve nearest to $(2, -8)$ is $(4, -4)$.
+The following code verifies the optimization:
+\begin{lstlisting}[frame=single, basicstyle=\ttfamily\small]
+	codes/12/q31.py
+\end{lstlisting}
+
+\item Find $\displaystyle\int_1^3 \brak{x^2 + 2 + e^{2x}}\,dx$ as the limit of sums.
+\hfill (12~2019)
+
+\solution
+From the Riemann sum definition \eqref{eq:CBSE12-2019-riemann_limit}:
+\begin{align}
+	\int_a^b f(x)\,dx = \lim_{h \to 0} h \sum_{r=1}^n f\brak{a + rh}
+\end{align}
+where $a = 1, b = 3 \implies nh = b - a = 2$, and $f(x) = x^2 + 2 + e^{2x}$.
+Evaluating $f\brak{1 + rh}$:
+\begin{align}
+	f\brak{1 + rh} = \brak{1 + rh}^2 + 2 + e^{2\brak{1 + rh}} = 3 + 2rh + r^2h^2 + e^2\brak{e^{2h}}^r
+\end{align}
+Using standard summation formulas \eqref{eq:CBSE12-2019-sum_r}, \eqref{eq:CBSE12-2019-sum_r2}, and \eqref{eq:CBSE12-2019-sum_geom}:
+\begin{align}
+	h S_n &= 3\brak{nh} + 2h^2\left[\frac{n\brak{n+1}}{2}\right] + h^3\left[\frac{n\brak{n+1}\brak{2n+1}}{6}\right] + e^2 e^{2h} \left(\frac{e^{2nh} - 1}{e^{2h} - 1}\right) h \\
+	&= 3\brak{nh} + \brak{nh}\brak{nh + h} + \frac{\brak{nh}\brak{nh + h}\brak{2nh + h}}{6} + e^2\brak{e^{2nh} - 1}e^{2h} \left(\frac{2h}{e^{2h} - 1}\right)\frac{1}{2}
+\end{align}
+Taking the limit as $h \to 0$ using \eqref{eq:CBSE12-2019-exp_limit}:
+\begin{align}
+	\int_1^3 \brak{x^2 + 2 + e^{2x}}\,dx &= 3\brak{2} + 2\brak{2} + \frac{2\brak{2}\brak{4}}{6} + \brak{e^6 - e^2}\brak{1}\left(\frac{1}{2}\cdot 1\right) \\
+	&= 6 + 4 + \frac{8}{3} + \frac{e^6 - e^2}{2} = \frac{38}{3} + \frac{e^6 - e^2}{2}
+\end{align}
+
+
+\item Using integration, find the area of the triangular region whose sides have the equations $y = 2x + 1$, $y = 3x + 1$, and $x = 4$.
+\hfill (12~2019)
+
+\solution
+Solving the lines simultaneously:
+\begin{itemize}
+	\item Intersection of $y = 2x + 1$ and $y = 3x + 1 \implies x = 0, y = 1$ (Vertex $A(0, 1)$).
+	\item Intersection of $y = 2x + 1$ and $x = 4 \implies x = 4, y = 9$ (Vertex $B(4, 9)$).
+	\item Intersection of $y = 3x + 1$ and $x = 4 \implies x = 4, y = 13$ (Vertex $C(4, 13)$).
+\end{itemize}
+From \eqref{eq:CBSE12-2019-area_curves}, integrating between $x = 0$ and $x = 4$:
+\begin{align}
+	\text{Area} &= \int_0^4 \sbrak{\brak{3x + 1} - \brak{2x + 1}}\,dx = \int_0^4 x\,dx \\
+	&= \left.\frac{x^2}{2}\right|_0^4 = \frac{4^2}{2} = 8\text{ square units}
+\end{align}
+The following code verifies the area:
+\begin{lstlisting}[frame=single, basicstyle=\ttfamily\small]
+	codes/12/q33.py
+\end{lstlisting}
+
+\item If $\vec{A} = \begin{bmatrix} 1 & 3 & 4 \\ 2 & 1 & 2 \\ 5 & 1 & 1 \end{bmatrix}$, find $\vec{A}^{-1}$. Hence solve the system of equations:
+\begin{align}
 	x + 3y + 4z &= 8 \\
 	2x + y + 2z &= 5 \\
 	5x + y + z &= 7
-\end{align*}
+\end{align}
+\hfill (12~2019)
 
-Expressing the system in canonical matrix form $A X = B$:
-\begin{align*}
-	\begin{bmatrix}
-		1 & 3 & 4 \\
-		2 & 1 & 2 \\
-		5 & 1 & 1
-	\end{bmatrix}
-	\begin{bmatrix}
-		x \\
-		y \\
-		z
-	\end{bmatrix}
-	=
-	\begin{bmatrix}
-		8 \\
-		5 \\
-		7
-	\end{bmatrix}
-\end{align*}
-where:
-\begin{align*}
-	X = \begin{bmatrix} x \\ y \\ z \end{bmatrix}, \qquad B = \begin{bmatrix} 8 \\ 5 \\ 7 \end{bmatrix}
-\end{align*}
-
-Multiplying both sides on the left by $A^{-1}$:
-\begin{align*}
-	X = A^{-1}B
-\end{align*}
-
-Substituting $A^{-1}$ and $B$:
-\begin{align*}
-	\begin{bmatrix}
-		x \\
-		y \\
-		z
-	\end{bmatrix}
-	&= \frac{1}{11}
-	\begin{bmatrix}
+\solution
+Evaluating the determinant of $\vec{A}$:
+\begin{align}
+	\mydet{\vec{A}} = 1\brak{1 - 2} - 3\brak{2 - 10} + 4\brak{2 - 5} = 1\brak{-1} - 3\brak{-8} + 4\brak{-3} = -1 + 24 - 12 = 11
+\end{align}
+Using \eqref{eq:CBSE12-2019-inv_adjugate}, computing the cofactor matrix and its transpose (adjugate):
+\begin{align}
+	\operatorname{adj}(\vec{A}) = \begin{bmatrix}
 		-1 & 1 & 2 \\
 		8 & -19 & 6 \\
 		-3 & 14 & -5
 	\end{bmatrix}
-	\begin{bmatrix}
-		8 \\
-		5 \\
-		7
+\end{align}
+Thus, $\vec{A}^{-1}$ is given by:
+\begin{align}
+	\vec{A}^{-1} = \frac{1}{11}\begin{bmatrix}
+		-1 & 1 & 2 \\
+		8 & -19 & 6 \\
+		-3 & 14 & -5
 	\end{bmatrix}
-\end{align*}
+\end{align}
+Writing the system of equations in matrix form $\vec{A}\vec{X} = \vec{B}$ where $\vec{X} = \myvec{x \\ y \\ z}$ and $\vec{B} = \myvec{8 \\ 5 \\ 7}$:
+\begin{align}
+	\vec{X} = \vec{A}^{-1}\vec{B} = \frac{1}{11}\begin{bmatrix}
+		-1 & 1 & 2 \\
+		8 & -19 & 6 \\
+		-3 & 14 & -5
+	\end{bmatrix}\myvec{8 \\ 5 \\ 7} = \frac{1}{11}\myvec{-8 + 5 + 14 \\ 64 - 95 + 42 \\ -24 + 70 - 35} = \frac{1}{11}\myvec{11 \\ 11 \\ 11} = \myvec{1 \\ 1 \\ 1}
+\end{align}
+Therefore, $x = 1$, $y = 1$, and $z = 1$.
 
-Evaluating the matrix multiplication:
-\begin{align*}
-	\begin{bmatrix}
-		x \\
-		y \\
-		z
-	\end{bmatrix}
-	&= \frac{1}{11}
-	\begin{bmatrix}
-		(-1)(8) + (1)(5) + (2)(7) \\
-		(8)(8) + (-19)(5) + (6)(7) \\
-		(-3)(8) + (14)(5) + (-5)(7)
-	\end{bmatrix} \\
-	&= \frac{1}{11}
-	\begin{bmatrix}
-		-8 + 5 + 14 \\
-		64 - 95 + 42 \\
-		-24 + 70 - 35
-	\end{bmatrix} \\
-	&= \frac{1}{11}
-	\begin{bmatrix}
-		11 \\
-		11 \\
-		11
-	\end{bmatrix}
-	=
-	\begin{bmatrix}
-		1 \\
-		1 \\
-		1
-	\end{bmatrix}
-\end{align*}
 
-Equating corresponding entries:
-\begin{align*}
-	x = 1, \qquad y = 1, \qquad z = 1
-\end{align*}
-
-\item Find the inverse of the following matrix, using elementary transformations:
-\[
-A=\begin{bmatrix}
-2&0&-1\\
-5&1&0\\
-0&1&3
-\end{bmatrix}.
-\]
+\item Find the inverse of the matrix $\vec{A} = \begin{bmatrix} 2 & 0 & -1 \\ 5 & 1 & 0 \\ 0 & 1 & 3 \end{bmatrix}$ using elementary transformations.
+\hfill (12~2019)
 
 \solution
-To find $A^{-1}$ using elementary row transformations, write:
-\begin{align*}
-	A = I A
-\end{align*}
-\begin{align*}
-	\begin{bmatrix}
-		2 & 0 & -1 \\
-		5 & 1 & 0 \\
-		0 & 1 & 3
-	\end{bmatrix}
-	=
-	\begin{bmatrix}
-		1 & 0 & 0 \\
-		0 & 1 & 0 \\
-		0 & 0 & 1
-	\end{bmatrix}
-	A
-\end{align*}
-
-Elementary row operations:
-
-Applying $R_2 \to R_2 - 2R_1$:
-\begin{align*}
-	\begin{bmatrix}
-		2 & 0 & -1 \\
-		5 - 2(2) & 1 - 2(0) & 0 - 2(-1) \\
-		0 & 1 & 3
-	\end{bmatrix}
-	&=
-	\begin{bmatrix}
-		1 & 0 & 0 \\
-		0 - 2(1) & 1 - 2(0) & 0 - 2(0) \\
-		0 & 0 & 1
-	\end{bmatrix}
-	A \\
-	\begin{bmatrix}
-		2 & 0 & -1 \\
-		1 & 1 & 2 \\
-		0 & 1 & 3
-	\end{bmatrix}
-	&=
-	\begin{bmatrix}
-		1 & 0 & 0 \\
-		-2 & 1 & 0 \\
-		0 & 0 & 1
-	\end{bmatrix}
-	A
-\end{align*}
-
-Interchanging rows $R_1 \leftrightarrow R_2$:
-\begin{align*}
-	\begin{bmatrix}
-		1 & 1 & 2 \\
-		2 & 0 & -1 \\
-		0 & 1 & 3
-	\end{bmatrix}
-	&=
-	\begin{bmatrix}
-		-2 & 1 & 0 \\
-		1 & 0 & 0 \\
-		0 & 0 & 1
-	\end{bmatrix}
-	A
-\end{align*}
-
-Applying $R_2 \to R_2 - 2R_1$:
-\begin{align*}
-	\begin{bmatrix}
-		1 & 1 & 2 \\
-		2 - 2(1) & 0 - 2(1) & -1 - 2(2) \\
-		0 & 1 & 3
-	\end{bmatrix}
-	&=
-	\begin{bmatrix}
-		-2 & 1 & 0 \\
-		1 - 2(-2) & 0 - 2(1) & 0 - 2(0) \\
-		0 & 0 & 1
-	\end{bmatrix}
-	A \\
-	\begin{bmatrix}
-		1 & 1 & 2 \\
-		0 & -2 & -5 \\
-		0 & 1 & 3
-	\end{bmatrix}
-	&=
-	\begin{bmatrix}
-		-2 & 1 & 0 \\
-		5 & -2 & 0 \\
-		0 & 0 & 1
-	\end{bmatrix}
-	A
-\end{align*}
-
-Interchanging rows $R_2 \leftrightarrow R_3$:
-\begin{align*}
-	\begin{bmatrix}
-		1 & 1 & 2 \\
-		0 & 1 & 3 \\
-		0 & -2 & -5
-	\end{bmatrix}
-	&=
-	\begin{bmatrix}
-		-2 & 1 & 0 \\
-		0 & 0 & 1 \\
-		5 & -2 & 0
-	\end{bmatrix}
-	A
-\end{align*}
-
-Applying $R_1 \to R_1 - R_2$ and $R_3 \to R_3 + 2R_2$:
-\begin{align*}
-	\begin{bmatrix}
-		1 & 0 & -1 \\
-		0 & 1 & 3 \\
-		0 & 0 & 1
-	\end{bmatrix}
-	&=
-	\begin{bmatrix}
-		-2 - 0 & 1 - 0 & 0 - 1 \\
-		0 & 0 & 1 \\
-		5 + 2(0) & -2 + 2(0) & 0 + 2(1)
-	\end{bmatrix}
-	A \\
-	\begin{bmatrix}
-		1 & 0 & -1 \\
-		0 & 1 & 3 \\
-		0 & 0 & 1
-	\end{bmatrix}
-	&=
-	\begin{bmatrix}
-		-2 & 1 & -1 \\
-		0 & 0 & 1 \\
-		5 & -2 & 2
-	\end{bmatrix}
-	A
-\end{align*}
-
-Applying $R_1 \to R_1 + R_3$ and $R_2 \to R_2 - 3R_3$:
-\begin{align*}
-	\begin{bmatrix}
-		1 & 0 & 0 \\
-		0 & 1 & 0 \\
-		0 & 0 & 1
-	\end{bmatrix}
-	&=
-	\begin{bmatrix}
-		-2 + 5 & 1 + (-2) & -1 + 2 \\
-		0 - 3(5) & 0 - 3(-2) & 1 - 3(2) \\
-		5 & -2 & 2
-	\end{bmatrix}
-	A \\
-	\begin{bmatrix}
-		1 & 0 & 0 \\
-		0 & 1 & 0 \\
-		0 & 0 & 1
-	\end{bmatrix}
-	&=
-	\begin{bmatrix}
+From \eqref{eq:CBSE12-2019-gauss_jordan}, setting up the augmented matrix $\sbrak{\vec{A} \mid \vec{I}}$ and applying Gauss-Jordan row elimination:
+\begin{align}
+	\sbrak{\vec{A} \mid \vec{I}} = \left[\begin{array}{ccc|ccc} 2 & 0 & -1 & 1 & 0 & 0 \\ 5 & 1 & 0 & 0 & 1 & 0 \\ 0 & 1 & 3 & 0 & 0 & 1 \end{array}\right]
+\end{align}
+Performing elementary row transformations $R_2 \to R_2 - 2R_1$, row swaps, and elimination steps reduces the left block to the identity matrix $\vec{I}$, yielding:
+\begin{align}
+	\vec{A}^{-1} = \begin{bmatrix}
 		3 & -1 & 1 \\
 		-15 & 6 & -5 \\
 		5 & -2 & 2
 	\end{bmatrix}
-	A
-\end{align*}
+\end{align}
 
-Since $I = A^{-1}A$, the inverse of matrix $A$ is:
-\begin{align*}
-	A^{-1} = \begin{bmatrix}
-		3 & -1 & 1 \\
-		-15 & 6 & -5 \\
-		5 & -2 & 2
-	\end{bmatrix}
-\end{align*}
 
-\item A company produces two types of goods, A and B, that require gold and silver. Each unit of type A requires 3 g of silver and 1 g of gold while that of type B requires 1 g of silver and 2 g of gold. The company can use at the most 9 g of silver and 8 g of gold. If each unit of type A brings a profit of Rs.~40 and that of type B Rs.~50, find the number of units of each type that the company should produce to maximize profit. Formulate the above LPP and solve it graphically and also find the maximum profit.
+\item A company produces two types of goods, A and B, that require gold and silver. Each unit of type A requires $3\text{ g}$ of silver and $1\text{ g}$ of gold while that of type B requires $1\text{ g}$ of silver and $2\text{ g}$ of gold. The company can use at most $9\text{ g}$ of silver and $8\text{ g}$ of gold. If each unit of type A brings a profit of Rs.~40 and that of type B Rs.~50, find the number of units of each type that the company should produce to maximize profit. Formulate the above LPP and solve it graphically and find the maximum profit.
+\hfill (12~2019)
 
 \solution
-Let $x$ be the number of units of type A produced.
-Let $y$ be the number of units of type B produced.
-
-The profit generated from type A is Rs.~$40$ per unit and from type B is Rs.~$50$ per unit[cite: 1].
-The total profit $Z$ to be maximized is:
-\begin{align*}
-	Z = 40x + 50y
-\end{align*}
-
-Silver constraint:
-Type A requires $3\text{ g}$ and type B requires $1\text{ g}$ of silver, with a maximum availability of $9\text{ g}$[cite: 1]:
-\begin{align*}
-	3x + y \le 9
-\end{align*}
-
-Gold constraint:
-Type A requires $1\text{ g}$ and type B requires $2\text{ g}$ of gold, with a maximum availability of $8\text{ g}$[cite: 1]:
-\begin{align*}
-	x + 2y \le 8
-\end{align*}
-
-Non-negativity constraints:
-The production quantities cannot be negative:
-\begin{align*}
-	x \ge 0, \qquad y \ge 0
-\end{align*}
-
-Thus, the mathematical formulation of the LPP is:
-\begin{align*}
+Let $x$ and $y$ be the units of type A and type B goods produced.
+From \eqref{eq:CBSE12-2019-lpp_obj} and \eqref{eq:CBSE12-2019-lpp_constraints}, the LPP formulation is:
+\begin{align}
 	\text{Maximize } & Z = 40x + 50y \\
 	\text{subject to } & 3x + y \le 9 \\
 	& x + 2y \le 8 \\
-	& x \ge 0, \quad y \ge 0
-\end{align*}
-
-Plotting the boundary lines associated with each constraint:
-
-Line 1: $3x + y = 9$
-
-When $x = 0 \implies y = 9 \implies (0, 9)$
-
-When $y = 0 \implies x = 3 \implies (3, 0)$
-
-Testing $(0, 0)$: $3(0) + 0 = 0 \le 9$ (holds true, so the half-plane contains the origin).
-
-Line 2: $x + 2y = 8$
-When $x = 0 \implies y = 4 \implies (0, 4)$
-When $y = 0 \implies x = 8 \implies (8, 0)$
-Testing $(0, 0)$: $0 + 2(0) = 0 \le 8$ (holds true, so the half-plane contains the origin).
-
-Intersection point of boundary lines:
-Solving the simultaneous linear equations:
-\begin{align*}
-	3x + y &= 9 \implies y = 9 - 3x \\
-	x + 2(9 - 3x) &= 8 \\
-	x + 18 - 6x &= 8 \\
-	-5x &= -10 \implies x = 2
-\end{align*}
-Substituting $x = 2$:
-\begin{align*}
-	y = 9 - 3(2) = 3
-\end{align*}
-The intersection point is $B(2, 3)$.
-
-The feasible region bounded by the coordinate axes and the lines is the convex polygon $OABC$ with vertices:
-\begin{align*}
+	& x \ge 0, \; y \ge 0
+\end{align}
+The feasible region is the polygon $OABC$ bounded by the extreme corner points:
+\begin{align}
 	O(0, 0), \quad A(3, 0), \quad B(2, 3), \quad C(0, 4)
-\end{align*}
+\end{align}
+Evaluating the objective function $Z$ at each corner point:
+\begin{itemize}
+	\item At $O(0, 0): Z = 0$
+	\item At $A(3, 0): Z = 40\brak{3} + 50\brak{0} = 120$
+	\item At $B(2, 3): Z = 40\brak{2} + 50\brak{3} = 80 + 150 = 230$
+	\item At $C(0, 4): Z = 40\brak{0} + 50\brak{4} = 200$
+\end{itemize}
+By the Corner-Point Theorem, the maximum profit is Rs.~$230$, achieved by producing $2$ units of type A and $3$ units of type B.
+The following code verifies the graphical optimization:
+\begin{lstlisting}[frame=single, basicstyle=\ttfamily\small]
+	codes/12/q36.py
+\end{lstlisting}
 
-Corner points and objective function evaluation:
-Evaluating $Z = 40x + 50y$ at each extreme point:
-
-At $O(0, 0)$:
-\begin{align*}
-	Z = 40(0) + 50(0) = 0
-\end{align*}
-
-At $A(3, 0)$:
-\begin{align*}
-	Z = 40(3) + 50(0) = 120
-\end{align*}
-
-At $B(2, 3)$:
-\begin{align*}
-	Z = 40(2) + 50(3) = 80 + 150 = 230
-\end{align*}
-
-At $C(0, 4)$:
-\begin{align*}
-	Z = 40(0) + 50(4) = 200
-\end{align*}
-
-Conclusion:
-The maximum value of $Z$ is Rs.~$230$, which occurs at the corner point $(2, 3)$.
-Hence, the company should produce $2$ units of type A and $3$ units of type B to obtain a maximum profit of Rs.~$230$.
-
-
-\item There are three coins. One is a two-headed coin, another is a biased coin that comes up heads 75\% of the time and the third is an unbiased coin. One of the three coins is chosen at random and tossed. If it shows heads, what is the probability that it is the two-headed coin?
+\item There are three coins. One is a two-headed coin, another is a biased coin that comes up heads $75\%$ of the time and the third is an unbiased coin. One of the three coins is chosen at random and tossed. If it shows heads, what is the probability that it is the two-headed coin?
+\hfill (12~2019)
 
 \solution
-Let the events be defined as:
-\begin{align*}
-	E_1 &: \text{The chosen coin is the two-headed coin} \\
-	E_2 &: \text{The chosen coin is the biased coin} \\
-	E_3 &: \text{The chosen coin is the unbiased coin} \\
-	A &: \text{The tossed coin shows heads}
-\end{align*}
-
-Prior probabilities:
-Since one coin is chosen uniformly at random among the three coins::
-\begin{align*}
-	P(E_1) = P(E_2) = P(E_3) = \frac{1}{3}
-\end{align*}
-
-Conditional probabilities of getting a head:
-For the two-headed coin, both faces are heads:
-\begin{align*}
-	P(A \mid E_1) = 1
-\end{align*}
-
-For the biased coin, it comes up heads $75\%$ of the time:
-\begin{align*}
-	P(A \mid E_2) = \frac{75}{100} = \frac{3}{4}
-\end{align*}
-
-For the unbiased coin, heads and tails are equally likely:
-\begin{align*}
-	P(A \mid E_3) = \frac{1}{2}
-\end{align*}
-
-By the law of total probability, the marginal probability of observing a head is:
-\begin{align*}
-	P(A) &= P(E_1)P(A \mid E_1) + P(E_2)P(A \mid E_2) + P(E_3)P(A \mid E_3) \\
-	&= \frac{1}{3}(1) + \frac{1}{3}\left(\frac{3}{4}\right) + \frac{1}{3}\left(\frac{1}{2}\right) 
-	= \frac{1}{3}\left(\frac{9}{4}\right) = \frac{3}{4}
-\end{align*}
-
-Posterior probability via Bayes' theorem:
-The conditional probability that the coin is the two-headed coin given that it showed heads is:
-\begin{align*}
-	P(E_1 \mid A) &= \frac{P(E_1)P(A \mid E_1)}{P(A)} \\
-	&= \frac{\frac{1}{3} \cdot 1}{\frac{3}{4}} 
-	= \frac{1}{3} \times \frac{4}{3} 
-	= \frac{4}{9}
-\end{align*}
-
-The probability that it is the two-headed coin is $\dfrac{4}{9}$.
-
-\item Find the vector and Cartesian equations of the plane passing through the points having position vectors
-$
-\vec i+\vec j-2\vec k,\quad
-2\vec i-\vec j+\vec k,\quad
-\vec i+2\vec j+\vec k.
-$
-Write the equation of a plane passing through the point $(2,3,7)$ and parallel to the plane obtained above. Hence, find the distance between the two parallel planes.
-
-\solution
-Let the given points be $A$, $B$, and $C$, with position vectors[cite: 1]:
-\begin{align*}
-	\vec{a} &= \vec{i} + \vec{j} - 2\vec{k} &
-	\vec{b} &= 2\vec{i} - \vec{j} + \vec{k} &
-	\vec{c} &= \vec{i} + 2\vec{j} + \vec{k}
-\end{align*}
-
-The displacement vectors lying in the plane are:
-\begin{align*}
-	\vec{AB} &= \vec{b} - \vec{a} = (2 - 1)\vec{i} + (-1 - 1)\vec{j} + (1 - (-2))\vec{k} = \vec{i} - 2\vec{j} + 3\vec{k} \\
-	\vec{AC} &= \vec{c} - \vec{a} = (1 - 1)\vec{i} + (2 - 1)\vec{j} + (1 - (-2))\vec{k} = 0\vec{i} + \vec{j} + 3\vec{k}
-\end{align*}
-
-A normal vector $\vec{n}$ to the plane is given by the cross product $\vec{AB} \times \vec{AC}$:
-\begin{align*}
-	\vec{n} = \vec{AB} \times \vec{AC} &= \begin{vmatrix}
-		\vec{i} & \vec{j} & \vec{k} \\
-		1 & -2 & 3 \\
-		0 & 1 & 3
-	\end{vmatrix} 	
-	= \vec{i}(-6 - 3) - \vec{j}(3 - 0) + \vec{k}(1 - 0) \\
-	= -9\vec{i} - 3\vec{j} + \vec{k}
-\end{align*}
-
-Multiplying by $-1$ to choose an outward normal with positive leading coordinate:
-\begin{align*}
-	\vec{n}_1 = 9\vec{i} + 3\vec{j} - \vec{k}
-\end{align*}
-
-The vector equation of a plane passing through $\vec{a}$ with normal $\vec{n}_1$ is:
-\begin{align*}
-	\vec{r} \cdot \vec{n}_1 = \vec{a} \cdot \vec{n}_1
-\end{align*}
-
-Evaluating the scalar product on the right-hand side:
-\begin{align*}
-	\vec{a} \cdot \vec{n}_1 &= (\vec{i} + \vec{j} - 2\vec{k}) \cdot (9\vec{i} + 3\vec{j} - \vec{k}) 
-	= 9 + 3 + 2 = 14
-\end{align*}
-
-Thus, the vector equation of the plane is:
-\begin{align*}
-	\vec{r} \cdot (9\vec{i} + 3\vec{j} - \vec{k}) = 14
-\end{align*}
-
-Substituting $\vec{r} = x\vec{i} + y\vec{j} + z\vec{k}$, the Cartesian equation of the plane is:
-\begin{align*}
-	9x + 3y - z = 14 
-\end{align*}
-
-Equation of the parallel plane:
-Any plane parallel to $9x + 3y - z = 14$ has the same normal vector $\vec{n}_1 = 9\vec{i} + 3\vec{j} - \vec{k}$, so its equation is of the form:
-\begin{align*}
-	\vec{r} \cdot (9\vec{i} + 3\vec{j} - \vec{k}) = d \quad \text{or} \quad 9x + 3y - z = d
-\end{align*}
-
-Since this plane passes through the point $(2, 3, 7)$ with position vector $\vec{a}_2 = 2\vec{i} + 3\vec{j} + 7\vec{k}$:
-\begin{align*}
-	d = 9(2) + 3(3) - (7) = 18 + 9 - 7 = 20
-\end{align*}
-
-Parallel plane equations:
-
-Vector equation:
-\begin{align*}
-	\vec{r} \cdot (9\vec{i} + 3\vec{j} - \vec{k}) = 20
-\end{align*}
-
-Cartesian equation:
-\begin{align*}
-	9x + 3y - z = 20 
-\end{align*}
-
-The Cartesian equations of the two parallel planes are:
-\begin{align*}
-	\Pi_1 &: 9x + 3y - z - 14 = 0 \\
-	\Pi_2 &: 9x + 3y - z - 20 = 0
-\end{align*}
-
-The perpendicular distance $D$ between two parallel planes $Ax + By + Cz + D_1 = 0$ and $Ax + By + Cz + D_2 = 0$ is given by:
-\begin{align*}
-	D = \frac{|D_1 - D_2|}{\sqrt{A^2 + B^2 + C^2}}
-\end{align*}
-
-Substituting $A = 9$, $B = 3$, $C = -1$, $D_1 = -14$, and $D_2 = -20$:
-\begin{align*}
-	D &= \frac{|-14 - (-20)|}{\sqrt{9^2 + 3^2 + (-1)^2}} 
-	= \frac{|-14 + 20|}{\sqrt{81 + 9 + 1}} 
-	= \frac{6}{\sqrt{91}}\text{ units}
-\end{align*}
-
-
+Let $E_1, E_2, E_3$ be the events of choosing the two-headed coin, the biased coin, and the unbiased coin respectively.
+\begin{align}
+	\pr{E_1} = \pr{E_2} = \pr{E_3} = \frac{1}{3}
+\end{align}
+Let $A$ be the event that the tossed coin shows heads. The conditional probabilities are:
+\begin{align}
+	\pr{A \mid E_1} = 1, \quad \pr{A \mid E_2} = \frac{75}{100} = \frac{3}{4}, \quad \pr{A \mid E_3} = \frac{1}{2}
+\end{align}
+Using Bayes' theorem \eqref{eq:CBSE12-2019-bayes_theorem}:
+\begin{align}
+	\pr{E_1 \mid A} &= \frac{\pr{E_1}\pr{A \mid E_1}}{\pr{E_1}\pr{A \mid E_1} + \pr{E_2}\pr{A \mid E_2} + \pr{E_3}\pr{A \mid E_3}} \\
+	&= \frac{\frac{1}{3}\brak{1}}{\frac{1}{3}\brak{1} + \frac{1}{3}\brak{\frac{3}{4}} + \frac{1}{3}\brak{\frac{1}{2}}} = \frac{1}{1 + \frac{3}{4} + \frac{1}{2}} = \frac{1}{\frac{9}{4}} = \frac{4}{9}
+\end{align}
 
 
 \item Find the equation of the line passing through $(2,-1,2)$ and $(5,3,4)$ and of the plane passing through $(2,0,3)$, $(1,1,5)$ and $(3,2,4)$. Also, find their point of intersection.
+\hfill (12~2019)
 
 \solution
-Equation of the line:
-Let the two given points on the line be $P(2, -1, 2)$ and $Q(5, 3, 4)$[cite: 1].
-The direction ratios of the line passing through $P$ and $Q$ are:
-\begin{align*}
-	a &= 5 - 2 = 3 &
-	b &= 3 - (-1) = 4 &
-	c &= 4 - 2 = 2
-\end{align*}
-
-The vector equation of a line passing through a point with position vector $\vec{a}_1 = 2\vec{i} - \vec{j} + 2\vec{k}$ along the direction vector $\vec{b}_1 = 3\vec{i} + 4\vec{j} + 2\vec{k}$ is:
-\begin{align*}
-	\vec{r} = (2\vec{i} - \vec{j} + 2\vec{k}) + \lambda(3\vec{i} + 4\vec{j} + 2\vec{k})
-\end{align*}
-
-The Cartesian equation of the line is:
-\begin{align*}
-	\frac{x - 2}{3} = \frac{y + 1}{4} = \frac{z - 2}{2} = \lambda
-\end{align*}
-
-Equation of the plane:
-Let the three given points on the plane be $A(2, 0, 3)$, $B(1, 1, 5)$, and $C(3, 2, 4)$[cite: 1].
-The vectors lying along the plane are:
-\begin{align*}
-	\vec{AB} &= (1 - 2)\vec{i} + (1 - 0)\vec{j} + (5 - 3)\vec{k} = -\vec{i} + \vec{j} + 2\vec{k} \\
-	\vec{AC} &= (3 - 2)\vec{i} + (2 - 0)\vec{j} + (4 - 3)\vec{k} = \vec{i} + 2\vec{j} + \vec{k}
-\end{align*}
-
-A normal vector $\vec{n}$ to the plane is given by the vector cross product $\vec{AB} \times \vec{AC}$:
-\begin{align*}
-	\vec{n} = \vec{AB} \times \vec{AC} &= \begin{vmatrix}
-		\vec{i} & \vec{j} & \vec{k} \\
-		-1 & 1 & 2 \\
-		1 & 2 & 1
-	\end{vmatrix} \\
-	&= \vec{i}\left[(1)(1) - (2)(2)\right] - \vec{j}\left[(-1)(1) - (2)(1)\right] + \vec{k}\left[(-1)(2) - (1)(1)\right] \\
-	&= \vec{i}(1 - 4) - \vec{j}(-1 - 2) + \vec{k}(-2 - 1) 
-	= -3\vec{i} + 3\vec{j} - 3\vec{k}
-\end{align*}
-
-Dividing by $-3$, an equivalent unit-scaled normal vector is:
-\begin{align*}
-	\vec{n}_0 = \vec{i} - \vec{j} + \vec{k}
-\end{align*}
-
-The vector equation of the plane passing through $A(2, 0, 3)$ with position vector $\vec{a} = 2\vec{i} + 0\vec{j} + 3\vec{k}$ is:
-\begin{align*}
-	\vec{r} \cdot \vec{n}_0 = \vec{a} \cdot \vec{n}_0
-\end{align*}
-
-Evaluating the scalar product on the right-hand side:
-\begin{align*}
-	\vec{a} \cdot \vec{n}_0 = (2\vec{i} + 0\vec{j} + 3\vec{k}) \cdot (\vec{i} - \vec{j} + \vec{k}) = 2(1) + 0(-1) + 3(1) = 5
-\end{align*}
-
-Thus, the vector equation of the plane is:
-\begin{align*}
-	\vec{r} \cdot (\vec{i} - \vec{j} + \vec{k}) = 5
-\end{align*}
-
-Substituting $\vec{r} = x\vec{i} + y\vec{j} + z\vec{k}$, the Cartesian equation of the plane is:
-\begin{align*}
+The direction ratios of the line passing through $(2, -1, 2)$ and $(5, 3, 4)$ are $3, 4, 2$. Its parametric Cartesian equation from \eqref{eq:CBSE12-2019-line_cart} is:
+\begin{align}
+	\frac{x - 2}{3} = \frac{y + 1}{4} = \frac{z - 2}{2} = \lambda \implies x = 3\lambda + 2, \; y = 4\lambda - 1, \; z = 2\lambda + 2
+\end{align}
+The plane passing through $(2, 0, 3)$, $(1, 1, 5)$, and $(3, 2, 4)$ has normal $\vec{n} = \myvec{-1 \\ 1 \\ 2} \times \myvec{1 \\ 2 \\ 1} = \myvec{-3 \\ 3 \\ -3}$, yielding normal vector $\vec{n}_0 = \myvec{1 \\ -1 \\ 1}$.
+From \eqref{eq:CBSE12-2019-plane_three_points}, the Cartesian equation of the plane is:
+\begin{align}
 	x - y + z = 5
-\end{align*}
-
-Point of intersection:
-Any general point on the line can be parameterized in terms of scalar $\lambda$ as:
-\begin{align*}
-	x &= 3\lambda + 2 &
-	y &= 4\lambda - 1 &
-	z &= 2\lambda + 2
-\end{align*}
-
-Substituting these coordinates into the Cartesian equation of the plane:
-\begin{align*}
-	(3\lambda + 2) - (4\lambda - 1) + (2\lambda + 2) &= 5 \implies
-	3\lambda + 2 - 4\lambda + 1 + 2\lambda + 2 = 5 \implies
-	\lambda = 0
-\end{align*}
-
-Substituting $\lambda = 0$ back into the parametric coordinates:
-\begin{align*}
-	x &= 3(0) + 2 = 2 &
-	y &= 4(0) - 1 = -1 &
-	z &= 2(0) + 2 = 2
-\end{align*}
-
-Therefore, the point of intersection of the line and the plane is $(2, -1, 2)$.
+\end{align}
+From \eqref{eq:CBSE12-2019-line_plane_intersection}, substituting the line parameterization into the plane equation:
+\begin{align}
+	\brak{3\lambda + 2} - \brak{4\lambda - 1} + \brak{2\lambda + 2} = 5 \implies \lambda + 5 = 5 \implies \lambda = 0
+\end{align}
+Substituting $\lambda = 0$ into the line equations yields the point of intersection:
+\begin{align}
+	\vec{P} = \myvec{2 \\ -1 \\ 2}
+\end{align}
+The following code verifies the intersection:
+\begin{lstlisting}[frame=single, basicstyle=\ttfamily\small]
+	codes/12/q38.py
+\end{lstlisting}
 
 \end{enumerate}
 
